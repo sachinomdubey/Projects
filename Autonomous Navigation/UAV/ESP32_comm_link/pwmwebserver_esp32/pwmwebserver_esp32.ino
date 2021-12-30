@@ -1,21 +1,10 @@
-/*********
-  Rui Santos
-  Complete project details at https://randomnerdtutorials.com  
-*********/
-
 #include <WiFi.h>
-//#include <analogWrite.h>
-//#include <Servo.h>
+#include <analogWrite.h>
 #define throttle 2
 #define yaw 4
 int val;
-//Servo myservo;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
 
-// GPIO the servo is attached to
-static const int servoPin = 13;
-
-// Replace with your network credentials
+// Replace with your network credentials as per your android phone or access point.
 const char* ssid     = "SOD";
 const char* password = "sachin009";
 
@@ -32,22 +21,22 @@ int pos2 = 0;
 
 // Current time
 unsigned long currentTime = millis();
+
 // Previous time
 unsigned long previousTime = 0; 
+
 // Define timeout time in milliseconds (example: 2000ms = 2s)
 const long timeoutTime = 2000;
 
 void setup() {
   Serial.begin(115200);
   ledcAttachPin(throttle, 0);
-  ledcSetup(0, 50, 11);
+  ledcSetup(0, 50, 11);   //Using 50Hz, 11-Bit resolution PWM signal generation from channel-0 for throttle control
   ledcAttachPin(yaw, 1);
-  ledcSetup(1, 50,11s);
-  //myservo.attach(servoPin);  // attaches the servo on the servoPin to the servo object
+  ledcSetup(1, 50,11);    //Using 50Hz, 11-Bit resolution PWM signal generation from channel-1 for Yaw control
 
   // Connect to Wi-Fi network with SSID and password
-  Serial.print("Connecting to ");"
-  \ 
+  Serial.print("Connecting to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -64,7 +53,6 @@ void setup() {
 
 void loop(){
   WiFiClient client = server.available();   // Listen for incoming clients
-
   if (client) {                             // If a new client connects,
     currentTime = millis();
     previousTime = currentTime;
@@ -99,8 +87,8 @@ void loop(){
             client.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>");
                      
             // Web Page
-            client.println("</head><body><h1>ESP32 with Servo</h1>");
-            client.println("<p>Position: <span id=\"servoPos\"></span></p>");          
+            client.println("</head><body><h1>ESP32 with Drone (Throttle on channel 3) </h1>");
+            client.println("<p>Channel3: <span id=\"servoPos\"></span></p>");          
             client.println("<input type=\"range\" orient=\"vertical\" min=\"103\" max=\"205\" class=\"slider\" id=\"servoSlider\" onchange=\"servo(this.value)\" value=\""+valueString+"\"/>");
             
             client.println("<script>var slider = document.getElementById(\"servoSlider\");");
@@ -118,16 +106,7 @@ void loop(){
             client.println("$.ajaxSetup({timeout:1000}); function servo1(pos1) { ");
             client.println("$.get(\"/?value4=\" + pos1 + \"&\"); {Connection: close};}</script>");
 
-            client.println("<p>Position: <span id=\"servoPos1\"></span></p>");          
-            client.println("<input type=\"range\" min=\"0\" max=\"2047\" class=\"slider\" id=\"servoSlider2\" onchange=\"servo1(this.value)\" value=\""+valueString+"\"/>");
-            
-            client.println("<script>var slider2 = document.getElementById(\"servoSlider1\");");
-            client.println("var servoP2 = document.getElementById(\"servoPos1\"); servoP2.innerHTML = slider2.value;");
-            client.println("slider2.oninput = function() { slider2.value = this.value; servoP2.innerHTML = this.value; }");
-            client.println("$.ajaxSetup({timeout:1000}); function servo2(pos2) { ");
-            client.println("$.get(\"/?value1=\" + pos2 + \"&\"); {Connection: close};}</script>");
-
-            //LED fade code
+            //If throttle slider is varied then the following is executed.
             if(header.indexOf("GET /?value3=")>=0) {
               pos1 = header.indexOf('=');
               pos2 = header.indexOf('&');
@@ -140,19 +119,35 @@ void loop(){
               Serial.println(valueString); 
             }   
 
+            //If Yaw slider is varied then the following is executed.
+            if(header.indexOf("GET /?value4=")>=0) {
+              pos1 = header.indexOf('=');
+              pos2 = header.indexOf('&');
+              valueString = header.substring(pos1+1, pos2);
+              
+              //Rotate the servo
+              val = valueString.toInt();
+              
+              ledcWrite(1, val);
+              Serial.println(valueString); 
+            }   
+
        
             // The HTTP response ends with another blank line
             client.println();
             // Break out of the while loop
             break;
-          } else { // if you got a newline, then clear currentLine
+          } 
+          else { // if you got a newline, then clear currentLine
             currentLine = "";
           }
-        } else if (c != '\r') {  // if you got anything else but a carriage return character,
+        } 
+        else if (c != '\r') {  // if you got anything else but a carriage return character,
           currentLine += c;      // add it to the end of the currentLine
         }
       }
     }
+    
     // Clear the header variable
     header = "";
     // Close the connection
