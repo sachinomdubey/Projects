@@ -1,19 +1,9 @@
-/*********
-  Rui Santos
-  Complete project details at https://randomnerdtutorials.com  
-*********/
-
 #include <WiFi.h>
 //#include <analogWrite.h>
 //#include <Servo.h>
 #define throttle 2
 #define yaw 4
 int val;
-//Servo myservo;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
-
-// GPIO the servo is attached to
-static const int servoPin = 13;
 
 // Replace with your network credentials
 const char* ssid     = "SOD";
@@ -43,11 +33,9 @@ void setup() {
   ledcSetup(0, 50, 11);
   ledcAttachPin(yaw, 1);
   ledcSetup(1, 50,11s);
-  //myservo.attach(servoPin);  // attaches the servo on the servoPin to the servo object
 
   // Connect to Wi-Fi network with SSID and password
-  Serial.print("Connecting to ");"
-  \ 
+  Serial.print("Connecting to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -95,7 +83,7 @@ void loop(){
             // Feel free to change the background-color and font-size attributes to fit your preferences
             client.println("<style>body { text-align: center; font-family: \"Trebuchet MS\", Arial; margin-left:auto; margin-right:auto;}");
             client.println(".slider { width: 300px; }</style>");
-           // client.println(".slider { width: 300px; }</style>");
+            // client.println(".slider { width: 300px; }</style>");
             client.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>");
                      
             // Web Page
@@ -127,7 +115,7 @@ void loop(){
             client.println("$.ajaxSetup({timeout:1000}); function servo2(pos2) { ");
             client.println("$.get(\"/?value1=\" + pos2 + \"&\"); {Connection: close};}</script>");
 
-           client.println("<p>Position: <span id=\"servoPos1\"></span></p>");          
+            client.println("<p>Position: <span id=\"servoPos1\"></span></p>");          
             client.println("<input type=\"range\" min=\"103\" max=\"205\" class=\"slider\" id=\"servoSlider3\" onchange=\"servo1(this.value)\" value=\""+valueString+"\"/>");
             
             client.println("<script>var slider3 = document.getElementById(\"servoSlider3\");");
@@ -135,8 +123,7 @@ void loop(){
             client.println("slider3.oninput = function() { slider3.value = this.value; servoP3.innerHTML = this.value; }");
             client.println("$.ajaxSetup({timeout:1000}); function servo3(pos3) { ");
             client.println("$.get(\"/?value2  =\" + pos3 + \"&\"); {Connection: close};}</script>");
-            client.println("</body></html>");  
-            //GET /?value=180& HTTP/1.1
+            client.println("</body></html>"); 
 
             //PWN for throttle signal (pin 2)
             if(header.indexOf("GET /?value3=")>=0) {
@@ -152,15 +139,11 @@ void loop(){
             }   
 
             //PWM for yaw signal (pin 4)    
-            
             if(header.indexOf("GET /?value4=")>=0) {
               pos1 = header.indexOf('=');
               pos2 = header.indexOf('&');
               valueString = header.substring(pos1+1, pos2);
-              
-              //Rotate the servo
               val = valueString.toInt();
-              
               ledcWrite(1, val);
               Serial.println(valueString); 
             }      
