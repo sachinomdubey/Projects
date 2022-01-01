@@ -89,6 +89,7 @@ int main(void)
     PyHal_GPIO_SetDir(18, 1); 	// LED is connected to Pin 18
     PyHal_GPIO_SetDir(4, 1);	// Motor direction control pins
     PyHal_GPIO_SetDir(5, 1);
+    PyHal_GPIO_SetDir(12, 1);   //Motor speed control pin
     PyHal_GPIO_Set(4, 1); 	//Setting motor direction as forward always.
     PyHal_GPIO_Set(5, 0);
      
