@@ -95,7 +95,7 @@ int main(void)
 
 
     PyHal_GPIO_SetDir(11, 0); 	//input from flysky receiver channel 2
-    PyHal_GPIO_SetDir(12, 0);	//input from flysky receiver channel 2
+    PyHal_GPIO_SetDir(12, 0);	//input from flysky receiver channel 4
     PyHal_GPIO_SetDir(4, 1);	//Direction control for motor-1 (pin 4 and 5)
     PyHal_GPIO_SetDir(5, 1);
     PyHal_GPIO_SetDir(6, 1);	//Direction control for motor-2 (pin 6 and 7)
