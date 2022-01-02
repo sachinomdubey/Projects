@@ -1,0 +1,27 @@
+\documentclass{iiththesis}
+
+
+
+
+\usepackage{import}
+\import{common/}{preamble}
+
+%\input{acknowledgments/acks}
+%\dedication{.}
+\input{abstract/abstract}
+
+\renewcommand{\bibname}{References}
+\begin{document}
+
+\input{chapter-1/introduction}
+
+\input{chapter-2/chapter-2}
+\input{chapter-3/chapter-3}
+\input{conclusion-chapter/conclusion}
+
+\clearpage
+\newpage
+\addcontentsline{toc}{chapter}{References} % Please do not remove this
+\bibliographystyle{iiththesis}
+\bibliography{references}
+\end{document}

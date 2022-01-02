@@ -1,0 +1,54 @@
+\documentclass{common/iiththesis}
+%\documentclass[lof,lot,loa,department=ee,degree=mtech,backref=page]{common/iiththesis}
+
+\usepackage{graphicx}
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt}
+\usepackage{lscape}
+\usepackage{float}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\book{thesis}
+\title{Autonomous Navigation of UGV/UAV}
+\degree{M.Tech. in Communication \& Signal Processing}
+\department{Electrical Engineering}
+\submitted{June 2022}
+\author{Sachinkumar Omprakash Dubey}
+\adviser{Dr. G V V Sharma}
+\addradviser{Dept. of Electrical Engineering\\ IIT Hyderabad}
+%\chair{---------}
+%\addrchair{Dept. of Mech Eng \\ IITH}
+%\external{----------}
+%\addrexternal{Dept. of Chem Eng \\ IITM}
+%\internal{----------}
+%\addrinternal{Dept. Math \\ IITH}
+%\coguide{----------}
+%\addrcoguide{Dept. of Chem Eng \\ IITH}
+
+
+%\input{acknowledgments/acks}
+%\dedication{.}
+\input{abstract/abstract}
+
+\renewcommand{\bibname}{References}
+\begin{document}
+\input{chapter-1/introduction}
+\input{chapter-2/chapter-2}
+\input{chapter-3/chapter-3}
+\input{chapter-4/chapter-4}
+%\input{conclusion-chapter/conclusion}
+
+\clearpage
+\newpage
+\addcontentsline{toc}{chapter}{References} % Please do not remove this
+\bibliographystyle{iiththesis}
+\bibliography{references}
+\end{document}
