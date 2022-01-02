@@ -62,7 +62,7 @@
 \maketitlepage
 %\makecopyrightpage
 % \makedeclarepage
-%\makecertificate
+\makecertificate
 % \makeacknowledgements
 % \makededication
 \makeabstract
@@ -191,81 +191,81 @@ Indian Institute of Technology, Hyderabad \\
 %   \clearpage}
 
 
-%   \newpage
+  \newpage
   
-%   \newcommand*{\makecertificate}{
-%   \thispagestyle{empty}
-%   \vspace*{0in}
-%   \addcontentsline{toc}{section}{Approval Sheet}
-%   \begin{center}
-%   \bf
-% 	  {\Large Approval Sheet}
-%   \end{center}
-% %  \normalsize
+  \newcommand*{\makecertificate}{
+  \thispagestyle{empty}
+  \vspace*{0in}
+  \addcontentsline{toc}{section}{Approval Sheet}
+  \begin{center}
+  \bf
+	  {\Large Approval Sheet}
+  \end{center}
+%  \normalsize
   
   
-%  %% Guide
-%  This \@book ~entitled \@title ~by \@author ~is approved for the degree of \@degree ~from IIT Hyderabad
+ %% Guide
+ This \@book ~entitled \@title ~by \@author ~is approved for the degree of \@degree ~from IIT Hyderabad
  
-%  \ifx\@external\undefined
-% \else
-%  \vspace*{0.2in}
-%  \begin{flushright}
-%  --------------------------\\
-%   (\@external) Examiner \\
-%   \@addrexternal\\
-% \end{flushright}
-% \fi
+ \ifx\@external\undefined
+\else
+ \vspace*{0.2in}
+ \begin{flushright}
+ --------------------------\\
+  (\@external) Examiner \\
+  \@addrexternal\\
+\end{flushright}
+\fi
 
  
-%   \ifx\@internal\undefined
-% \else
-%  \vspace*{0.2in}
-%  \begin{flushright}
-%  --------------------------\\
-%   (\@internal) Examiner \\
-%   \@addrinternal\\
-% \end{flushright}
-% \fi
+  \ifx\@internal\undefined
+\else
+ \vspace*{0.2in}
+ \begin{flushright}
+ --------------------------\\
+  (\@internal) Examiner \\
+  \@addrinternal\\
+\end{flushright}
+\fi
  
-%  \vspace*{0.2in}
-%  \begin{flushright}
-%   --------------------------\\
-%   (\@adviser) Guide \\
-%   \@addradviser
-% \end{flushright}
-% \vspace*{0.2in}
+ \vspace*{0.2in}
+ \begin{flushright}
+  --------------------------\\
+  (\@adviser) Guide \\
+  \@addradviser
+\end{flushright}
+\vspace*{0.2in}
 
 
-% \ifx\@coguide\undefined
-% \else
-%  \vspace*{0.2in}
-%  \begin{flushright}
-%  --------------------------\\
-%   (\@coguide) Co-Adviser \\
-%   \@addrcoguide\\
-% \end{flushright}
-% \fi
+\ifx\@coguide\undefined
+\else
+ \vspace*{0.2in}
+ \begin{flushright}
+ --------------------------\\
+  (\@coguide) Co-Adviser \\
+  \@addrcoguide\\
+\end{flushright}
+\fi
 
 
 
-% \ifx\@chair\undefined
-% \else
-%  \vspace*{0.2in}
-%  \begin{flushright}
-%  --------------------------\\
-%   (\@chair) Chairman \\
-%   \@addrchair \\
-% \end{flushright}
-% \fi
+\ifx\@chair\undefined
+\else
+ \vspace*{0.2in}
+ \begin{flushright}
+ --------------------------\\
+  (\@chair) Chairman \\
+  \@addrchair \\
+\end{flushright}
+\fi
 
-%% End of guide
+% End of guide
 
 
-%% End of co-guide
+% End of co-guide
 
   
- % \clearpage}
+  \clearpage}
   
 \newpage  
   
