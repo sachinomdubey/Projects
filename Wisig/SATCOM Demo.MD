@@ -3,14 +3,14 @@
 Make sure the FREE-5GC running. Follow the document named **Doc** to setup and run FREE-5GC. 
 
 ## gNB 
-**NOTE :** For Pre-requisites and detailed installation steps , Please refer the file "**User Guide.docx**". 
+**NOTE :** For Pre-requisites and detailed installation steps , Please refer the file "**UE_gNB_setup_user_guide.docx**". 
 
 After pre-requisite installations (JSON, ROHC, Nettle, Libexplain, DPDK, ASN1, SCTP, AESN1 and IPSEC), Follow the below steps in gNB workstation terminal:
 #### Exporting environment variables:
 
     export RTE_SDK=<path to DPDK folder installed>
     
-	export RTE_TARGET=x86_64-native-linuxapp-gcc
+    export RTE_TARGET=x86_64-native-linuxapp-gcc
 #### Loading Huge pages:
 
     sudo su
