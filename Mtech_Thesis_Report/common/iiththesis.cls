@@ -15,7 +15,7 @@
 %% You are allowed to distribute this file.
 %% 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{iiththesis}
+\ProvidesClass{common/iiththesis}
          [2011/06/16 v1.2 IIT Hyderabad Thesis class]
 \RequirePackage{setspace}
 \RequirePackage{hyperref}

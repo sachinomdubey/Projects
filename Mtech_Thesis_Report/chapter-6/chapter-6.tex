@@ -1,0 +1,38 @@
+\chapter{SATCOM for UAV Communication}
+\section{SATCOM Introduction}
+SATCOM can be utilized in applications where the user wants the data from the UAV to be accessed immediately without wanting the UAV to return. It would benefit greatly in surveillance applications in remote locations, where cellular resources are unvailable.
+
+3GPP community is also trying to incorporate SATCOM in cellular technologies, especially 5G, given its low latency and high datarate capabilities. In a typical 5G cellular network, we have a UE (user equipment) communicating with the 5G core network via the gNB (i.e base station) to access the data and voice services as shown in the figure xx. However, in case where our user equipment is an UAV, it may not be always reachable from its nearest gNB (for example in remote areas like forests, mountainous terrain, etc). This is where SATCOM would provide a non-terrestial network infrastructure, enabling communication with such remote devices.
+
+SATCOM infrastucture consist of one or many satellites. Satellites are Spaceborne vehicles orbiting the earth in Low Earth Orbits (LEO), Medium Earth Orbits (MEO), or Geostationary Earth Orbit (GEO). A non-terrestrial network refers to a network, or segment of networks using RF resources on board a satellite (or UAS platform).
+
+A Transparent satellite based NG-RAN architecture is as shown in figure xx. Here, the Air (Uu) interface between the user equipment (UAV) and the gNB is replaced by a satellite link. This ensures connectivity everywhere on the surface which is under coverage of the satellite.
+
+There can be various types of satellites, these are compared in Table \ref{comparison_table_between_satellites}:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{PARAMETER}                                                           & \textbf{GEO}     & \textbf{MEO}      & \textbf{LEO}          \\ \hline
+Altitude                                                                     & 36000 km         & 7000 to 25000 km  & 300 to 1500 km        \\ \hline
+\begin{tabular}[c]{@{}c@{}}Round trip delay \\ in milli-seconds\end{tabular} & High (541.46 ms) & Low ($\sim$180ms) & Very low (41.77 ms)   \\ \hline
+Earth area coverage                                                          & Very large       & Large             & Low                   \\ \hline
+Satellites required                                                          & 3 Satellites     & 6 Satellites      & Hundreds of Satellite \\ \hline
+\end{tabular}
+\caption{Comparison between GEO, LEO and MEO}
+\label{comparison_table_between_satellites}
+\end{table}
+
+\section{UGV (Setup for Demonstration of SATCOM for UAV)}
+This section gives details on the setup used to emulate SATCOM for UAV using 5G system. The setup consists of three Linux-x86 workstations connected over LAN. These workstations function as UE, gNB and 5G core respectively. Figure xx shows the three entity along with
+the software stack at each entity.
+In a conventional 5G system, the UE and gNB  communicate over wireless interface called the Uu interface. However, in our setup this interface is emulated using raw socket connection over LAN. Futher, the connection between the gNB and the 5G core is also over the raw socket. Since, we are using raw socket to transfer the control and data packets between the entities, the PHY layer which perform functions such as amplication, coding, modulation, etc is not needed. Hence, the PHY layer is not implemented in this setup.
+
+Software stack for all other layers (MAC, RLC, PDCP, SDAP, RRC, NAS) are present at both UE and gNB. An open source software called Free5GC is used as 5G core in our setup, whose main task includes:
+\begin{itemize}
+	\item Radio resource allocation
+	\item Control and initial setup of UE
+	\item Authorization 
+\end{itemize}
+
+\subsection{Navigation using Fly-sky Transmitter and Receiver} 
