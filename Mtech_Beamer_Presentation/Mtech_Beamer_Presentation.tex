@@ -33,6 +33,8 @@ columns=fullflexible
 \author{Sachinkumar Omprakash Dubey}
 \institute{Indian Institute of Technology, Hyderabad.}
 \date{\today}
+
+
 \begin{document}
 
 
@@ -64,51 +66,218 @@ columns=fullflexible
 \begin{columns}
 \column{1\textwidth}
   \begin{itemize}
-  \item In [1-3], the authors have shown various forces on stationary balls with/without spin in wind tunnels of different types. So, \textbf{drag} and \textbf{side} forces are determined.
-
+  \item This thesis titled "Navigation and communication for UGV/UAV, consists of two parts:
+   \begin{itemize}
+  \item The navigation part of this thesis includes utilization of various controllers to implement applications on UGV/UAV hardware.
+  \item The communication part explores the use of SATCOM and NBIoT for communicating with UAV.
+  \end{itemize}
+  \item UGV and UAV kits are ideal low-cost prototype systems for testing software before scaling it up and putting it on a real ground vehicle or a more complicated UAV system. 
   \end{itemize}
 \end{columns}
-
 \end{frame}
 
-
-\section{Motor control basic}
+\section{UGV kit hardware}
 \begin{frame}
-\frametitle{Motor control basic}
-
-
-  \begin{itemize}
-  \item The trajectory equation is derived from [5], where the author sets an equation for both compact debris and sheet debris.
-  
-  \end{itemize}
-
-
+\frametitle{UGV kit hardware}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\linewidth]{./figs/UGV_components_1.png}
+  \caption{UGV kit hardware}
+  \label{UGV_kit_hardware}
+\end{figure}
 %\begin{columns}
-%\column{.5\textwidth}
-%  \begin{itemize}
-%  \item First item.
-%  \item Second item.
-%  \end{itemize}
+%\column{1\textwidth}
 %\end{columns}
-
 \end{frame}
 
-\section{Serial communication protocols}
+\section{UAV kit hardware}
 \begin{frame}
-\frametitle{Serial communication protocols}
-The basic trajectory equation for cricket balls:\\
-
+\frametitle{UAV kit hardware}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\linewidth]{./figs/UAV_components.png}
+  \caption{UAV kit hardware}
+  \label{fig:side3}
+\end{figure}
+%\begin{columns}
+%\column{1\textwidth}
+%\end{columns}
 \end{frame}
 
-\section{ESP32 Based Applications}
+\section{Controllers}
 \begin{frame}
-\frametitle{ESP32 Based Applications}
-
+\frametitle{Controllers}
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Parameters} & \textbf{Arduino Uno} & \textbf{Raspberry Pi 3B} & \textbf{ESP-32} \\ \hline
+\textbf{Processor} & ATMega328P & \begin{tabular}[c]{@{}c@{}}Quad-core Broadcom \\ BCM2837 (4×Cortex-A53)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Xtensa Dual-Core 32-bit \\ LX6 with 600 DMIPS\end{tabular} \\ \hline
+\textbf{GPU} & - & \begin{tabular}[c]{@{}c@{}}Broadcom VideoCore IV \\ @ 250 MHz\end{tabular} & - \\ \hline
+\textbf{Operating voltage} & 5V & 5V & 3.3V \\ \hline
+\textbf{Clock speed} & 16 MHz & 1.2GHz & 26 MHz – 52 MHz \\ \hline
+\textbf{System memory} & 2kB & 1 GB & \textless{}45kB \\ \hline
+\textbf{Flash memory} & 32 kB & - & up to 128MB \\ \hline
+\textbf{EEPROM} & 1 kB & - & - \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Communication \\ supported\end{tabular}} & \begin{tabular}[c]{@{}c@{}}IEEE 802.11 b/g/n\\ Bluetooth via Shield\end{tabular} & \begin{tabular}[c]{@{}c@{}}IEEE 802.11 b/g/n\\ Bluetooth, Ethernet Serial\end{tabular} & IEEE 802.11 b/g/n \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Development \\ environments\end{tabular}} & Arduino IDE & \begin{tabular}[c]{@{}c@{}}Any linux \\ compatible IDE\end{tabular} & Arduino IDE, Lua Loader \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Programming \\ language\end{tabular}} & Embedded C, C++ & \begin{tabular}[c]{@{}c@{}}Python, C, C++, Java,\\ Scratch, Ruby\end{tabular} & Embedded C, C++ \\ \hline
+\textbf{I/O Connectivity} & SPI I2C UART GPIO & \begin{tabular}[c]{@{}c@{}}SPI DSI UART \\ SDIOCSI GPIO\end{tabular} & UART, GPIO \\ \hline
+\end{tabular}
+}
+\caption{Comparison between Arduino Uno, Raspberry Pi 3B and ESP-32}
+\end{table}
 \end{frame}
 
-\section{Vaman Based Applications}
+\section{Controllers (Vaman)}
 \begin{frame}
-\frametitle{Vaman Based Applications}
+\frametitle{Controllers (Vaman)}
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{itemize}
+		\item On-board dual processor (ARM + FPGA)
+		\item On-board WiFi/BT/BLE connectivity with ESP32
+		\item $\mu$SD card support
+		\item On-board inertial measurement unit
+		\item On-board BMO055 smart fusion sensor
+		\item On-board DPS310 provides pressure, humidity and temperature monitoring
+	\end{itemize}
+
+	\column{0.5\textwidth}
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=0.8\linewidth]{./figs/Vaman.png}
+  		\caption{Vaman - Pygmy BB4}
+  		\label{Vaman}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\section{Motor control using PWM}
+\begin{frame}
+\frametitle{Motor control using PWM}
+\begin{itemize}
+	\item A pulse width modulation speed control system works by sending a series of "ON-OFF" pulses
+to the motor. The frequency of square wave is kept constant while varying the duty cycle (the
+fraction of time that the output voltage is "ON" compared to when it is "OFF").
+	\item By changing the width of the ON duration, one can control the average DC voltage applied to
+the motor. The below equation (\ref{eq1}) gives the relation between the Duty cycle ($D$) and the average voltage:
+
+\begin{align}
+V_{dc}&={\frac {1}{T}}\int _{0}^{T}v_{PWM}(t)\,dt  \label{eq1} \\
+V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{\text{min}}\,dt\right) \nonumber \\ \nonumber
+&={\frac {1}{T}}\left(D\cdot T\cdot v_{\text{max}}+T\left(1-D\right)v_{\text{min}}\right)\\ \nonumber
+&=D\cdot v_{\text{max}}+\left(1-D\right)v_{\text{min}} 
+\end{align}
+\end{itemize}
+\end{frame}
+
+\section{Motor control using PWM 1}
+\begin{frame}
+\frametitle{Motor control using PWM \small{(Continued)}}
+\begin{figure}[t!]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width = 7cm]{./figs/PWM_speed_control.png}
+        \caption{PWM speed control}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width = 4.5cm]{./figs/Motor_driver_L298.jpg}
+        \caption{Dual motor driver module (L298N)}
+    \end{subfigure}
+
+\end{figure} 	
+\end{frame}
+
+
+
+
+\section{ESP32 Based Applications 1}
+\begin{frame}
+\frametitle{ESP32 Based Applications-1}
+\begin{columns}
+	\column{0.9\textwidth}
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/Wiring_UGV_flysky.png}
+  		\caption{UGV Navigation using Fly-sky transmitter \& receiver (ESP32)}
+  		\label{Wiring_UGV_flysky}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\section{ESP32 Based Applications 2}
+\begin{frame}
+\frametitle{ESP32 Based Applications-2}
+\begin{columns}
+	\column{0.8\textwidth}
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/Wiring_UGV_speech.png}
+  		\caption{UGV Navigation using Android phone (ESP32)(Manual and Speech)}
+  		\label{Wiring_UGV_speech}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\section{ESP32 Based Applications 3}
+\begin{frame}
+\frametitle{ESP32 Based Applications-3}
+\begin{columns}
+	\column{0.95\textwidth}
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/Flow_UGV_beacon.png}
+  		\caption{UGV beacon tracking}
+  		\label{Flow_UGV_beacon}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\section{ESP32 Based Applications 4}
+\begin{frame}
+\frametitle{ESP32 Based Applications-4}
+\begin{columns}
+	\column{0.95\textwidth}
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/Wiring_UAV_ESP32_commlink.png}
+  		\caption{UAV Navigation using ESP32 and Android phone}
+  		\label{Wiring_UAV_ESP32_commlink}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\section{Vaman Based Applications 1}
+\begin{frame}
+\frametitle{Vaman Based Applications-1}
+\begin{columns}
+	\column{0.75\textwidth}
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/Wiring_UGV_flysky_Vaman.png}
+  		\caption{UGV Navigation using Fly-sky transmitter \& receiver (Vaman)}
+  		\label{Wiring_UGV_flysky_Vaman}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\section{Vaman Based Applications 2}
+\begin{frame}
+\frametitle{Vaman Based Applications-2}
+\begin{columns}
+	\column{0.75\textwidth}
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/Wiring_UGV_phone_vaman.png}
+  		\caption{UGV Navigation using Android phone (Vaman)}
+  		\label{Wiring_UGV_phone_vaman}
+	\end{figure}
+\end{columns}
 \end{frame}
 
 \section{SATCOM for UAV Communication}

@@ -1,8 +1,0 @@
-\beamer@sectionintoc {1}{Content}{2}{0}{1}
-\beamer@sectionintoc {2}{Introduction}{3}{0}{2}
-\beamer@sectionintoc {3}{Motor control basic}{4}{0}{3}
-\beamer@sectionintoc {4}{Serial communication protocols}{5}{0}{4}
-\beamer@sectionintoc {5}{ESP32 Based Applications}{6}{0}{5}
-\beamer@sectionintoc {6}{Vaman Based Applications}{7}{0}{6}
-\beamer@sectionintoc {7}{SATCOM for UAV Communication}{8}{0}{7}
-\beamer@sectionintoc {8}{Conclusion and Future Directions}{9}{0}{8}
