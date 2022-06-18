@@ -1,4 +1,5 @@
 \documentclass{beamer}
+\setbeamertemplate{caption}[numbered]
 \usepackage{listings}
 \lstset{
 %language=C,
@@ -37,7 +38,6 @@ columns=fullflexible
 
 \begin{document}
 
-
 \begin{frame}
 \titlepage
 \end{frame}
@@ -69,7 +69,7 @@ columns=fullflexible
   \item This thesis titled "Navigation and communication for UGV/UAV, consists of two parts:
    \begin{itemize}
   \item The navigation part of this thesis includes utilization of various controllers to implement applications on UGV/UAV hardware.
-  \item The communication part explores the use of SATCOM and NBIoT for communicating with UAV.
+  \item The communication part explores the use of SATCOM and NBIoT for communicating with UAV/UGV.
   \end{itemize}
   \item UGV and UAV kits are ideal low-cost prototype systems for testing software before scaling it up and putting it on a real ground vehicle or a more complicated UAV system. 
   \end{itemize}
@@ -196,9 +196,9 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 
 
 
-\section{ESP32 Based Applications 1}
+\section{ESP32 Based Application 1}
 \begin{frame}
-\frametitle{ESP32 Based Applications-1}
+\frametitle{ESP32 Based Application-1}
 \begin{columns}
 	\column{0.9\textwidth}
 	\begin{figure}[h!]
@@ -210,9 +210,9 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 \end{columns}
 \end{frame}
 
-\section{ESP32 Based Applications 2}
+\section{ESP32 Based Application 2}
 \begin{frame}
-\frametitle{ESP32 Based Applications-2}
+\frametitle{ESP32 Based Application-2}
 \begin{columns}
 	\column{0.8\textwidth}
 	\begin{figure}[h!]
@@ -224,9 +224,9 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 \end{columns}
 \end{frame}
 
-\section{ESP32 Based Applications 3}
+\section{ESP32 Based Application 3}
 \begin{frame}
-\frametitle{ESP32 Based Applications-3}
+\frametitle{ESP32 Based Application-3}
 \begin{columns}
 	\column{0.95\textwidth}
 	\begin{figure}[h!]
@@ -238,9 +238,9 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 \end{columns}
 \end{frame}
 
-\section{ESP32 Based Applications 4}
+\section{ESP32 Based Application 4}
 \begin{frame}
-\frametitle{ESP32 Based Applications-4}
+\frametitle{ESP32 Based Application-4}
 \begin{columns}
 	\column{0.95\textwidth}
 	\begin{figure}[h!]
@@ -252,9 +252,9 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 \end{columns}
 \end{frame}
 
-\section{Vaman Based Applications 1}
+\section{Vaman Based Application 1}
 \begin{frame}
-\frametitle{Vaman Based Applications-1}
+\frametitle{Vaman Based Application-1}
 \begin{columns}
 	\column{0.75\textwidth}
 	\begin{figure}[h!]
@@ -266,9 +266,9 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 \end{columns}
 \end{frame}
 
-\section{Vaman Based Applications 2}
+\section{Vaman Based Application 2}
 \begin{frame}
-\frametitle{Vaman Based Applications-2}
+\frametitle{Vaman Based Application-2}
 \begin{columns}
 	\column{0.75\textwidth}
 	\begin{figure}[h!]
@@ -282,22 +282,116 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 
 \section{SATCOM for UAV Communication}
 \begin{frame}{SATCOM for UAV Communication}
-    \begin{itemize}
-    \item 
-    When the cricket ball travel through the air towards the batsman, the air flow around the ball can be \textbf{laminar} or \textbf{turbulent}.
-  \end{itemize}
+\begin{itemize}
+	\item Satellite Communication (SATCOM) can be used for UAV for remote access/control as well as transmit and receive data without requiring it to return to the operator.
+	\item Convinced by the potential of 5G, Satellite industry has shown increased interest and participation in 3GPP to integrate satellite infrastructure with terrestrial network of 5G
+	\item Figure \ref{Conventional_5G} shows a typical 5G terrestrial network:
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=0.9\linewidth]{./figs/Conventional_5G.png}
+  		\caption{Conventional 5G-NR system}
+  		\label{Conventional_5G}
+	\end{figure}
+\end{itemize}
 \end{frame} 
 
-\section{Conclusion and Future Directions}
-\begin{frame}{Conclusion and Future Directions}
-    
+\section{SATCOM for UAV Communication}
+\begin{frame}{SATCOM for UAV \small{(Continued})}
+\begin{itemize}
+	\item There are scenerios, where our user equipment (UAV in our case) may not be reachable from
+its nearest gNB (for example in remote areas like forests, mountainous terrain, etc).
+	\item SATCOM provides a non-terrestrial network infrastructure, enabling communication with such
+remote devices.
+	\item Latest advancements in the satellite communications have overcome previous constraints. 
+ \item New generation of Low Earth Orbit (LEO) constellations have lessened satellite communications latency
+\item Technological improvements in Geostationary (GEO) satellites have provided high throughput and increased the reliability of GEO satellites.
+\end{itemize}
+\end{frame} 
+
+\section{Transparent satellite based NG-RAN architecture}
+\begin{frame}{Transparent satellite based NG-RAN architecture}
+    \begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/SATCOM_figure.png}
+  		\caption{Transparent satellite based NG-RAN architecture}
+  		\label{SATCOM_figure}
+	\end{figure}
   
 \end{frame} 
 
 
+\section{Set-up for Demonstration of SATCOM}
+\begin{frame}{Set-up for Demonstration of SATCOM}
+    \begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/SATCOM_setup.png}
+  		\caption{Set-up for Demonstration of SATCOM}
+  		\label{SATCOM_setup}
+	\end{figure}
+\end{frame} 
 
+\section{Free-5GC Environment}
+\begin{frame}{Free-5GC Environment}
+	\begin{itemize}
+    	\item The Free5GC project is an open-source initiative for mobile core networks of the fifth generation (5G) aimed  at construction of the 5G core network (5GC) as described in 3GPP Release 15 (R15) and futher.
+    	\item It our setup it acts as our 5G core network and runs on a linux-x86 system to provides services to the UE via the gNB as defined by the 3GPP specifications.
+    \end{itemize}
 
+	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=0.7\linewidth]{./figs/Free5GC.png}
+  		\caption{Free5GC Environment}
+  		\label{Free5GC}
+	\end{figure}
+\end{frame} 
 
+\section{Compilation and Execution at gNB}
+\begin{frame}[fragile]{Compilation and Execution at gNB}
+\begin{itemize}
+    	\item Exporting environment variables for DPDK (Data Plane Development Kit consists of libraries to accelerate packet processing workloads):
+\begin{lstlisting}
+export RTE_SDK=<path to DPDK folder installed>
+export RTE_TARGET=x86_64-native-linuxapp-gcc
+\end{lstlisting}
+	\item Loading Huge pages:
+	\begin{lstlisting}
+sudo su
+echo 4096 > /sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages
+exit
+\end{lstlisting}
+\item Compiling and running the gNB App:
+\begin{lstlisting}
+cd ~/Documents/simran_wsp/bs_working/review-bs/5gnrps/src/gnbapp/test
+make clean
+make static -j10
+sudo ./gnbapp enp1s0 -- -diersg
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+
+\section{Compilation and Execution at UE}
+\begin{frame}[fragile]{Compilation and Execution at UE}
+\begin{itemize}
+    	\item Exporting environment variables for DPDK (Data Plane Development Kit consists of libraries to accelerate packet processing workloads)
+	\item Loading Huge pages
+\item Compiling and running the gNB App:
+\begin{lstlisting}
+cd /home/greyteal/Documents/simran_wsp/UE/5gnrps/src/ueapp/test
+make clean
+make CPUSOC=1 JSON=1 -j10
+sudo ./ueapp enp1s0 0 -- -dierns
+\end{lstlisting}
+\item Creating a tunnel interface for PDU session:
+\begin{lstlisting}
+sudo ifconfig tun00 10.60.0.1 up
+sudo ip route add 192.168.134.224 dev tun00
+\end{lstlisting}
+\item Check the PDU session using ping (5 packets):
+\begin{lstlisting}
+ping -I tun00 192.168.134.224 -c 5
+\end{lstlisting}
+\end{itemize}
+\end{frame}
 %\begin{figure}[h!]
 %  \centering
 %  \begin{subfigure}[b]{0.5\linewidth}
@@ -347,8 +441,8 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 %
 %\end{frame}
 
-\newpage
-\bibliography{ref}
+%\newpage
+%\bibliography{ref}
 
 \end{document}
 
