@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[xcolor=table]{beamer}
 \setbeamertemplate{caption}[numbered]
 \usepackage{listings}
 \lstset{
@@ -69,7 +69,7 @@ columns=fullflexible
   \item This thesis titled "Navigation and communication for UGV/UAV, consists of two parts:
    \begin{itemize}
   \item The navigation part of this thesis includes utilization of various controllers to implement applications on UGV/UAV hardware.
-  \item The communication part explores the use of SATCOM and NBIoT for communicating with UAV/UGV.
+  \item The communication part explores the use of SATCOM and NBIoT for communicating with UAV and UGV.
   \end{itemize}
   \item UGV and UAV kits are ideal low-cost prototype systems for testing software before scaling it up and putting it on a real ground vehicle or a more complicated UAV system. 
   \end{itemize}
@@ -392,6 +392,140 @@ ping -I tun00 192.168.134.224 -c 5
 \end{lstlisting}
 \end{itemize}
 \end{frame}
+
+
+
+\section{Emulating Satellite round-trip delay}
+\begin{frame}[fragile]{Emulating Satellite round-trip delay}
+\begin{itemize}
+	\item A satellite in the GEO orbit has a round-trip signal delay of around 542ms.
+	\item The entities in our setup communicate over LAN, hence we used a tool called NetEm to add the specified delay in our interface.
+	\item NetEm allows linux user to add of delay, packet loss, duplication, and more to packets leaving a particular network interface.
+	\item Fixed amount of delay:
+	\begin{lstlisting}
+sudo tc qdisc add dev enp2s0 root netem delay 542ms
+\end{lstlisting}
+\item Random delay:
+	\begin{lstlisting}
+sudo tc qdisc add dev enp2s0 root netem delay 542ms 20ms
+\end{lstlisting}
+\item Normal delay distribution:
+	\begin{lstlisting}
+sudo tc qdisc add dev enp2s0 root netem delay 542ms 20ms distribution normal
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+
+\section{Testing the added latency using ping}
+\begin{frame}
+\frametitle{Testing the added latency using ping}
+\begin{figure}[t!]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width = 6cm]{./figs/Ping_before_adding_delay.png}
+        \caption{Ping results before adding delay}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width = 6cm]{./figs/Ping_after_adding_delay.png}
+        \caption{Ping results after adding delay}
+    \end{subfigure}
+\end{figure} 	
+\end{frame}
+
+
+\section{5G-NR Call Flow}
+\begin{frame}{5G-NR Call Flow as per 3GPP standards}
+\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=0.8\linewidth]{./figs/5G_Call_Flow1.png}
+  		\label{5G_Call_Flow1}
+	\end{figure}
+\end{frame}
+\begin{frame}{5G-NR Call Flow as per 3GPP standards \small{(Continued)}}
+\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=0.8\linewidth]{./figs/5G_Call_Flow2.png}
+  		\label{5G_Call_Flow2}
+	\end{figure}
+\end{frame}
+
+
+
+\section{Streaming Video using the setup}
+\begin{frame}[fragile]{Streaming Video using the setup}
+\textbf{Creating video stream at source:}\\
+\begin{itemize}
+ \item 
+ To create a video stream (using file videoplayback.mp4) from 5GC to UE via gNB, run the following command in terminal of 5GC workstation. This will use UDP to stream video to a given destination IP address and port number.\\
+\begin{lstlisting}
+cd ~/Documents #go to video path
+vlc videoplayback.mp4 --sout=udp://10.60.0.1:1234
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+
+\section{Streaming Video using the setup}
+\begin{frame}[fragile]{Streaming Video using the setup \small{(Continued)}}
+\textbf{Viewing video stream at the destination:}\\
+\begin{itemize}
+ \item The video packets streamed by source travel through the software stack as shown in Figure xx.
+To view the stream at destination, run the following command in terminal. This will read the video packets received at the tun00 interface from the SDAP layer of software stack.\\
+\begin{lstlisting}
+vlc udp//@:1234 --miface=10.60.0.1:1234
+\end{lstlisting}
+\end{itemize}
+\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=0.5\linewidth]{./figs/Destination_viewing_stream.png}
+  		\label{Destination_viewing_stream}
+	\end{figure}
+\end{frame}
+
+
+\section{Video stream result}
+\begin{frame}{Video stream result}
+\begin{table}[]
+\centering
+\resizebox{0.9\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor[HTML]{DBDBEB} 
+\textbf{Sr No.}                                                & \textbf{\begin{tabular}[c]{@{}c@{}}Delay between the play command \\ at source and video packets received \\ at the destination (sec)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Delay between the stop command \\ at source and video packets halt at \\ the destination (sec)\end{tabular}} \\ \hline
+1                                                              & 2.10                                                                                                                                                & 1.60                                                                                                                                            \\ \hline
+2                                                              & 2.43                                                                                                                                                & 1.97                                                                                                                                            \\ \hline
+3                                                              & 2.04                                                                                                                                                & 1.90                                                                                                                                            \\ \hline
+4                                                              & 2.17                                                                                                                                                & 2.10                                                                                                                                            \\ \hline
+5                                                              & 2.16                                                                                                                                                & 1.7                                                                                                                                             \\ \hline
+\rowcolor[HTML]{E4E4EF} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{E4E4EF}\textbf{Average}} & \textbf{2.18}                                                                                                                                       & \textbf{1.854}                                                                                                                                  \\ \hline
+\end{tabular}
+}
+\caption{Result without ethernet delay}
+\end{table}
+\begin{table}[]
+\centering
+\resizebox{0.9\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor[HTML]{DBDBEB} 
+\textbf{Sr No.}                                                & \textbf{\begin{tabular}[c]{@{}c@{}}Delay between the play command \\ at source and video packets received \\ at the destination (sec)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Delay between the stop command \\ at source and video packets halt at \\ the destination (sec)\end{tabular}} \\ \hline
+1                                                              & 2.78                                                                                                                                                & 2.57                                                                                                                                            \\ \hline
+2                                                              & 2.58                                                                                                                                                & 2.32                                                                                                                                            \\ \hline
+3                                                              & 2.69                                                                                                                                                & 2.42                                                                                                                                            \\ \hline
+4                                                              & 2.64                                                                                                                                                & 2.74                                                                                                                                            \\ \hline
+5                                                              & 2.85                                                                                                                                                & 2.43                                                                                                                                            \\ \hline
+\rowcolor[HTML]{DBDBEB} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{E4E4EF}\textbf{Average}} & \textbf{2.708}                                                                                                                                      & \textbf{2.496}                                                                                                                                  \\ \hline
+\end{tabular}
+}
+\caption{Result with ethernet delay of 542 ms}
+\end{table}
+\end{frame}
+
+
 %\begin{figure}[h!]
 %  \centering
 %  \begin{subfigure}[b]{0.5\linewidth}
@@ -441,8 +575,8 @@ ping -I tun00 192.168.134.224 -c 5
 %
 %\end{frame}
 
-%\newpage
-%\bibliography{ref}
+\newpage
+\bibliography{ref}
 
 \end{document}
 
