@@ -49,7 +49,6 @@ columns=fullflexible
   \begin{itemize}
   \item Introduction
   \item Motor control basic
-  \item Serial communication protocols
   \item ESP32 based applications
   \item Vaman based applications
   \item SATCOM for UAV communication
@@ -541,7 +540,28 @@ vlc udp//@:1234 --miface=10.60.0.1:1234
 %\end{figure}
 %\end{frame}
 
+\section{UGV control using NBIoT setup}
+\begin{frame}{UGV control using NBIoT setup}
+\begin{figure}[h!]
+  		\centering
+  		\includegraphics[width=\linewidth]{./figs/NBIoT_setup.png}
+  		\label{NBIoT_setup}
+  		\caption{UGV control using NBIoT setup}
+\end{figure}
 
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+\begin{itemize}
+ \item The basic principle behind motor control, use of serial interfaces (UART, SPI, I2C) and the inherent software remains similar to that of bigger sophisticated hardware of actual ground/aerial vehicle.
+	\item Thus, The applications implemented on the UGV/UAV using ESP32/VAMAN can be scaled up to work on a real-life ground/aerial vehicle. This makes the UGV/UAV kit a good low cost prototype hardware.
+	\item The 3GPP standards for Non-Terrestrial Network for 5G are only a couples of months away from their release, Thus the SATCOM infrastructure for 5G is not far from being commercial. 
+	\item The experimental setup and results shown in this presentation confirms basic compatibility between satellite and 5G system.
+	
+\end{itemize}
+
+\end{frame}
 
 %\begin{frame}
 %
