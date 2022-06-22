@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {1.1.4}Raspberry Pi 3B}{3}{subsection.1.1.4}%
 \contentsline {chapter}{\numberline {2}Basics of Motor control}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}PWM speed control}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Brushed DC motor}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Brushed DC motor}{6}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Brush-less DC motor}{8}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Serial communication protocols}{10}{chapter.3}%
 \contentsline {section}{\numberline {3.1}UART (Universal Asynchronous Receiver/Transmitter)}{10}{section.3.1}%
@@ -67,20 +67,26 @@
 \contentsline {chapter}{\numberline {6}SATCOM for UAV Communication}{37}{chapter.6}%
 \contentsline {section}{\numberline {6.1}SATCOM Introduction}{37}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Application of SATCOM based UAV}{39}{subsection.6.1.1}%
-\contentsline {section}{\numberline {6.2}Set-up for Demonstration of SATCOM}{39}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Video Streaming using SATCOM}{40}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}FREE-5GC}{40}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}gNB}{40}{subsection.6.3.2}%
-\contentsline {subsubsection}{Exporting environment variables:}{40}{section*.71}%
-\contentsline {subsubsection}{Loading Huge pages:}{40}{section*.72}%
-\contentsline {subsubsection}{Compiling and running the gNB App:}{40}{section*.73}%
-\contentsline {subsection}{\numberline {6.3.3}UE}{41}{subsection.6.3.3}%
-\contentsline {subsubsection}{Exporting environment variables:}{41}{section*.74}%
-\contentsline {subsubsection}{Loading Huge pages:}{41}{section*.75}%
-\contentsline {subsubsection}{Compiling and running the UE App:}{41}{section*.76}%
-\contentsline {subsubsection}{Note the PDU session IP address and open a seperate terminal to run the following commands:}{41}{section*.77}%
-\contentsline {subsection}{\numberline {6.3.4}Addition of delays over Ethernet to emulate Satellite link}{41}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Streaming video from 5GC to UE via gNB}{42}{subsection.6.3.5}%
-\contentsline {subsubsection}{Creating video stream at source}{42}{section*.78}%
-\contentsline {subsubsection}{Viewing video stream at the destination}{42}{section*.79}%
-\contentsline {chapter}{\numberline {7}Conclusion and Future Directions}{43}{chapter.7}%
+\contentsline {section}{\numberline {6.2}Set-up for Demonstration of SATCOM}{40}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Free-5GC Environment}{40}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Video Streaming using the setup}{41}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Compilation and Execution at gNB}{41}{subsection.6.3.1}%
+\contentsline {subsubsection}{Exporting environment variables:}{41}{section*.73}%
+\contentsline {subsubsection}{Loading Huge pages:}{42}{section*.74}%
+\contentsline {subsubsection}{Compiling and running the gNB App:}{42}{section*.75}%
+\contentsline {subsection}{\numberline {6.3.2}Compilation and Execution at UE}{42}{subsection.6.3.2}%
+\contentsline {subsubsection}{Exporting environment variables:}{42}{section*.76}%
+\contentsline {subsubsection}{Loading Huge pages:}{42}{section*.77}%
+\contentsline {subsubsection}{Compiling and running the UE App:}{42}{section*.78}%
+\contentsline {subsubsection}{Note the PDU session IP address and open a seperate terminal to run the following commands:}{43}{section*.79}%
+\contentsline {subsection}{\numberline {6.3.3}Emulating Satellite round-trip delay}{43}{subsection.6.3.3}%
+\contentsline {subsubsection}{Fixed amount of delay}{43}{section*.80}%
+\contentsline {subsubsection}{Random delay}{43}{section*.81}%
+\contentsline {subsubsection}{Normal delay distribution:}{43}{section*.82}%
+\contentsline {subsection}{\numberline {6.3.4}Checking the added latency using ping}{44}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}5G-NR call flow}{45}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Streaming video using the setup}{46}{subsection.6.3.6}%
+\contentsline {subsubsection}{Creating video stream at source}{46}{section*.86}%
+\contentsline {subsubsection}{Viewing video stream at the destination}{46}{section*.87}%
+\contentsline {subsection}{\numberline {6.3.7}Video stream result}{47}{subsection.6.3.7}%
+\contentsline {chapter}{\numberline {7}Conclusion and Future Directions}{48}{chapter.7}%

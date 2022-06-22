@@ -32,10 +32,13 @@
 \BOOKMARK [1][-]{section.6.1}{SATCOM Introduction}{chapter.6}% 32
 \BOOKMARK [2][-]{subsection.6.1.1}{Application of SATCOM based UAV}{section.6.1}% 33
 \BOOKMARK [1][-]{section.6.2}{Set-up for Demonstration of SATCOM}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.3}{Video Streaming using SATCOM}{chapter.6}% 35
-\BOOKMARK [2][-]{subsection.6.3.1}{FREE-5GC}{section.6.3}% 36
-\BOOKMARK [2][-]{subsection.6.3.2}{gNB}{section.6.3}% 37
-\BOOKMARK [2][-]{subsection.6.3.3}{UE}{section.6.3}% 38
-\BOOKMARK [2][-]{subsection.6.3.4}{Addition of delays over Ethernet to emulate Satellite link}{section.6.3}% 39
-\BOOKMARK [2][-]{subsection.6.3.5}{Streaming video from 5GC to UE via gNB}{section.6.3}% 40
-\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Directions}{}% 41
+\BOOKMARK [2][-]{subsection.6.2.1}{Free-5GC Environment}{section.6.2}% 35
+\BOOKMARK [1][-]{section.6.3}{Video Streaming using the setup}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.3.1}{Compilation and Execution at gNB}{section.6.3}% 37
+\BOOKMARK [2][-]{subsection.6.3.2}{Compilation and Execution at UE}{section.6.3}% 38
+\BOOKMARK [2][-]{subsection.6.3.3}{Emulating Satellite round-trip delay}{section.6.3}% 39
+\BOOKMARK [2][-]{subsection.6.3.4}{Checking the added latency using ping}{section.6.3}% 40
+\BOOKMARK [2][-]{subsection.6.3.5}{5G-NR call flow}{section.6.3}% 41
+\BOOKMARK [2][-]{subsection.6.3.6}{Streaming video using the setup}{section.6.3}% 42
+\BOOKMARK [2][-]{subsection.6.3.7}{Video stream result}{section.6.3}% 43
+\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Directions}{}% 44

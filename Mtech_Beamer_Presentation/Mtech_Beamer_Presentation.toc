@@ -1,0 +1,59 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Content}{2}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Introduction}{3}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{UGV kit hardware}{4}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{UAV kit hardware}{5}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Controllers}{6}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{Controllers (Vaman)}{7}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{Motor control using PWM}{8}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{Motor control using PWM 1}{9}{0}{8}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {9}{ESP32 Based Application 1}{10}{0}{9}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {10}{ESP32 Based Application 2}{11}{0}{10}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {11}{ESP32 Based Application 3}{12}{0}{11}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {12}{ESP32 Based Application 4}{13}{0}{12}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {13}{Vaman Based Application 1}{14}{0}{13}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {14}{Vaman Based Application 2}{15}{0}{14}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {15}{SATCOM for UAV Communication}{16}{0}{15}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {16}{SATCOM for UAV Communication}{17}{0}{16}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {17}{Transparent satellite based NG-RAN architecture}{18}{0}{17}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {18}{Set-up for Demonstration of SATCOM}{19}{0}{18}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {19}{Free-5GC Environment}{20}{0}{19}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {20}{Compilation and Execution at gNB}{21}{0}{20}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {21}{Compilation and Execution at UE}{22}{0}{21}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {22}{Emulating Satellite round-trip delay}{23}{0}{22}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {23}{Testing the added latency using ping}{24}{0}{23}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {24}{5G-NR Call Flow}{25}{0}{24}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {25}{Streaming Video using the setup}{27}{0}{25}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {26}{Streaming Video using the setup}{28}{0}{26}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {27}{Video stream result}{29}{0}{27}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {28}{UGV control using NBIoT setup}{30}{0}{28}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {29}{Conclusion}{31}{0}{29}

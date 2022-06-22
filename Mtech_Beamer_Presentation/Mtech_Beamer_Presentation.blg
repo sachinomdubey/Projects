@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Mtech_Beamer_Presentation.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Mtech_Beamer_Presentation-blx.bib
+Database file #2: references.bib
+Biblatex version: 3.15
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 7 entries,
+            6393 wiz_defined-function locations,
+            1233 strings with 10134 characters,
+and the built_in function-call counts, 25258 in all, are:
+= -- 1584
+> -- 524
+< -- 256
++ -- 404
+- -- 140
+* -- 1341
+:= -- 1958
+add.period$ -- 0
+call.type$ -- 7
+change.case$ -- 181
+chr.to.int$ -- 42
+cite$ -- 12
+duplicate$ -- 2529
+empty$ -- 2627
+format.name$ -- 216
+if$ -- 5711
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 0
+newline$ -- 137
+num.names$ -- 307
+pop$ -- 2140
+preamble$ -- 1
+purify$ -- 177
+quote$ -- 0
+skip$ -- 1107
+stack$ -- 0
+substring$ -- 2357
+swap$ -- 749
+text.length$ -- 148
+text.prefix$ -- 6
+top$ -- 1
+type$ -- 211
+warning$ -- 0
+while$ -- 239
+width$ -- 0
+write$ -- 131

@@ -4,7 +4,15 @@
 \begin{itemize}
     \item A pulse width modulation speed control system works by sending a series of "ON-OFF" pulses to the motor. The frequency of square wave is kept constant while varying the duty cycle (the fraction of time that the output voltage is “ON” compared to when it is "OFF").
     \item By changing the width of the ON duration, one can control the average DC voltage applied to the motor. 
-    \item In other words, the wider the pulse width, the more average voltage applied to the motor terminals, the stronger the magnetic flux inside the armature windings and the faster the motor will rotate.
+    \item In other words, the wider the pulse width, the more average voltage applied to the motor terminals, the stronger the magnetic flux inside the armature windings and the faster the motor will rotate. The below equation (\ref{eq1}) gives the relation between the Duty cycle ($D$) and the average voltage:
+
+\begin{align}
+V_{dc}&={\frac {1}{T}}\int _{0}^{T}v_{PWM}(t)\,dt  \label{eq1} \\
+V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{\text{min}}\,dt\right) \nonumber \\ \nonumber
+&={\frac {1}{T}}\left(D\cdot T\cdot v_{\text{max}}+T\left(1-D\right)v_{\text{min}}\right)\\ \nonumber
+&=D\cdot v_{\text{max}}+\left(1-D\right)v_{\text{min}} 
+\end{align}
+
     \item Larger the duty-cycle, the faster the motor will rotate. Similarly, shorter the duty-cycle, the slower the motor will rotate.
 \end{itemize}
 

@@ -42,11 +42,12 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{Basics_motor_control}{{2}{5}{Basics of Motor control}{chapter.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}PWM speed control}{5}{section.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Brushed DC motor}{5}{section.2.2}\protected@file@percent }
+\newlabel{eq1}{{2.1}{5}{PWM speed control}{equation.2.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces PWM speed control\relax }}{6}{figure.caption.6}\protected@file@percent }
 \newlabel{BLDC_runner}{{2.1}{6}{PWM speed control\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Dual motor driver module (L298N)\relax }}{6}{figure.caption.7}\protected@file@percent }
-\newlabel{Motor_driver_L298}{{2.2}{6}{Dual motor driver module (L298N)\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Brushed DC motor}{6}{section.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Dual motor driver module (L298N)\relax }}{7}{figure.caption.7}\protected@file@percent }
+\newlabel{Motor_driver_L298}{{2.2}{7}{Dual motor driver module (L298N)\relax }{figure.caption.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Typical connection for motor driver module\relax }}{7}{figure.caption.8}\protected@file@percent }
 \newlabel{Driver_module_connection}{{2.3}{7}{Typical connection for motor driver module\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Brush-less DC motor}{8}{section.2.3}\protected@file@percent }
@@ -177,23 +178,44 @@
 \@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Comparison between GEO, LEO and MEO\relax }}{39}{table.caption.70}\protected@file@percent }
 \newlabel{comparison_table_between_satellites}{{6.1}{39}{Comparison between GEO, LEO and MEO\relax }{table.caption.70}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Application of SATCOM based UAV}{39}{subsection.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Set-up for Demonstration of SATCOM}{39}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Video Streaming using SATCOM}{40}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}FREE-5GC}{40}{subsection.6.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}gNB}{40}{subsection.6.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Exporting environment variables:}{40}{section*.71}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Loading Huge pages:}{40}{section*.72}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Compiling and running the gNB App:}{40}{section*.73}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}UE}{41}{subsection.6.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Exporting environment variables:}{41}{section*.74}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Loading Huge pages:}{41}{section*.75}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Compiling and running the UE App:}{41}{section*.76}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Note the PDU session IP address and open a seperate terminal to run the following commands:}{41}{section*.77}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Addition of delays over Ethernet to emulate Satellite link}{41}{subsection.6.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}Streaming video from 5GC to UE via gNB}{42}{subsection.6.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Creating video stream at source}{42}{section*.78}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Viewing video stream at the destination}{42}{section*.79}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion and Future Directions}{43}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Set-up for Demonstration of SATCOM}{40}{section.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Set-up for Demonstration of SATCOM\relax }}{40}{figure.caption.71}\protected@file@percent }
+\newlabel{SATCOM_setup}{{6.3}{40}{Set-up for Demonstration of SATCOM\relax }{figure.caption.71}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Free-5GC Environment}{40}{subsection.6.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Free-5GC Environment\relax }}{41}{figure.caption.72}\protected@file@percent }
+\newlabel{Free5GC}{{6.4}{41}{Free-5GC Environment\relax }{figure.caption.72}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Video Streaming using the setup}{41}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Compilation and Execution at gNB}{41}{subsection.6.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Exporting environment variables:}{41}{section*.73}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Loading Huge pages:}{42}{section*.74}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Compiling and running the gNB App:}{42}{section*.75}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Compilation and Execution at UE}{42}{subsection.6.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Exporting environment variables:}{42}{section*.76}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Loading Huge pages:}{42}{section*.77}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Compiling and running the UE App:}{42}{section*.78}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Note the PDU session IP address and open a seperate terminal to run the following commands:}{43}{section*.79}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Emulating Satellite round-trip delay}{43}{subsection.6.3.3}\protected@file@percent }
+\newlabel{Emulating_Satellite_roundtrip_delay}{{6.3.3}{43}{Emulating Satellite round-trip delay}{subsection.6.3.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Fixed amount of delay}{43}{section*.80}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Random delay}{43}{section*.81}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Normal delay distribution:}{43}{section*.82}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Checking the added latency using ping}{44}{subsection.6.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Ping before adding delay\relax }}{44}{figure.caption.83}\protected@file@percent }
+\newlabel{Ping_before_adding_delay}{{6.5}{44}{Ping before adding delay\relax }{figure.caption.83}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Ping after adding delay\relax }}{44}{figure.caption.84}\protected@file@percent }
+\newlabel{Ping_after_adding_delay}{{6.6}{44}{Ping after adding delay\relax }{figure.caption.84}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}5G-NR call flow}{45}{subsection.6.3.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces 5G-NR call flow\relax }}{45}{figure.caption.85}\protected@file@percent }
+\newlabel{5G_Call_Flow}{{6.7}{45}{5G-NR call flow\relax }{figure.caption.85}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.6}Streaming video using the setup}{46}{subsection.6.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Creating video stream at source}{46}{section*.86}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Viewing video stream at the destination}{46}{section*.87}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Viewing video stream at the destination\relax }}{46}{figure.caption.88}\protected@file@percent }
+\newlabel{Destination_viewing_stream}{{6.8}{46}{Viewing video stream at the destination\relax }{figure.caption.88}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.7}Video stream result}{47}{subsection.6.3.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Result without ethernet delay\relax }}{47}{table.caption.89}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Result with ethernet delay of 542 ms\relax }}{47}{table.caption.90}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion and Future Directions}{48}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:conclude}{{7}{43}{Conclusion and Future Directions}{chapter.7}{}}
+\newlabel{chap:conclude}{{7}{48}{Conclusion and Future Directions}{chapter.7}{}}

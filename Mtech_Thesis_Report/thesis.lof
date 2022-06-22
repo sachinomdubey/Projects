@@ -5,7 +5,7 @@
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Raspberry Pi 3B\relax }}{3}{figure.caption.4}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces PWM speed control\relax }}{6}{figure.caption.6}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Dual motor driver module (L298N)\relax }}{6}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Dual motor driver module (L298N)\relax }}{7}{figure.caption.7}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Typical connection for motor driver module\relax }}{7}{figure.caption.8}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Inrunner BLDC and Outrunner BLDC motors\relax }}{8}{figure.caption.9}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces 6 Pole and 12 Pole BLDC motors\relax }}{8}{figure.caption.10}%
@@ -36,4 +36,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Conventional 5G-NR system\relax }}{37}{figure.caption.68}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Transparent satellite based NG-RAN architecture\relax }}{38}{figure.caption.69}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Set-up for Demonstration of SATCOM\relax }}{40}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Free-5GC Environment\relax }}{41}{figure.caption.72}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Ping before adding delay\relax }}{44}{figure.caption.83}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Ping after adding delay\relax }}{44}{figure.caption.84}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces 5G-NR call flow\relax }}{45}{figure.caption.85}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Viewing video stream at the destination\relax }}{46}{figure.caption.88}%
 \addvspace {10\p@ }

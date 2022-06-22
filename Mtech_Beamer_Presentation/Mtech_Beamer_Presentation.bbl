@@ -1,0 +1,140 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{3GPP_23_502}{report}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={3GPP},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{3}
+    \field{sortinithash}{3}
+    \field{number}{23.502}
+    \field{title}{{5G; Procedures for the 5G System(3GPP TS 23.502 version
+  15.2.0 Release 15}}
+    \verb{url}
+    \verb https://www.etsi.org/deliver/etsi_ts/123500_123599/123502/15.02.00_60
+    \verb /ts_123502v150200p.pdf
+    \endverb
+    \list{institution}{1}{%
+      {{3rd Generation Partnership Project (3GPP)}}%
+    }
+    \field{type}{Technical Specification (TS)}
+  \endentry
+
+  \entry{3GPP_38_401}{report}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={3GPP},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{3}
+    \field{sortinithash}{3}
+    \field{number}{38.401}
+    \field{title}{{NG-RAN; Architecture description}}
+    \verb{url}
+    \verb https://www.etsi.org/deliver/etsi_ts/138400_138499/138401/15.09.00_60
+    \verb /ts_138401v150900p.pdf
+    \endverb
+    \list{institution}{1}{%
+      {{3rd Generation Partnership Project (3GPP)}}%
+    }
+    \field{type}{Technical Specification (TS)}
+  \endentry
+
+  \entry{VLC}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=AdLADJB}{%
+         prefix={Alexis\bibnamedelima de},
+         prefixi={A\bibinitperiod\bibinitdelim d\bibinitperiod},
+         family={Lattre},
+         familyi={L\bibinitperiod},
+         suffix={Johan\bibnamedelima Bilien},
+         suffixi={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={Anil\bibnamedelima Daoud},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AdLJBAD1}
+    \strng{fullhash}{AdLJBAD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+  \field{howpublished}{\url{https://wiki.videolan.org/Documentation:Streaming_HowTo/}}
+    \field{title}{Documentation:Streaming HowTo}
+  \endentry
+
+  \entry{ATIS_3GPP_38_821}{report}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={ATIS},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{A1}
+    \strng{fullhash}{A1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{38.821}
+    \field{title}{{3rd Generation Partnership Project; Technical Specification
+  Group Radio Access Network; Solutions for NR to support non-terrestrial
+  networks (NTN) (Release 16)}}
+    \verb{url}
+    \verb https://www.atis.org/wp-content/uploads/3gpp-documents/Rel16/ATIS.3GP
+    \verb P.38.821.V1600.pdf
+    \endverb
+    \list{institution}{1}{%
+      {{Alliance for Telecommunications Industry Solutions}}%
+    }
+    \field{type}{Technical Specification (TS)}
+  \endentry
+
+  \entry{esp32}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+  \field{howpublished}{\url{https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf}}
+    \field{title}{ESP32 Datasheet}
+  \endentry
+
+  \entry{components101}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{L298N motor driver module}
+    \verb{url}
+    \verb https://components101.com/modules/l293n-motor-driver-module
+    \endverb
+    \field{journaltitle}{Components101}
+  \endentry
+\enddatalist
+\endinput

@@ -1,12 +1,15 @@
 \documentclass[xcolor=table]{beamer}
 \setbeamertemplate{caption}[numbered]
 \usepackage{listings}
-\lstset{
+
+\lstset
+{
 %language=C,
 frame=single, 
 breaklines=true,
 columns=fullflexible
 }
+
 \usepackage{subcaption}
 \usepackage{setspace}
 \usepackage{url}
@@ -26,7 +29,8 @@ columns=fullflexible
 \newcommand\mytextbullet{\leavevmode%
 \usebeamertemplate{itemize item}\hspace{.5em}}
 
-\bibliographystyle{IEEEtran}
+\usepackage[natbib=true,style=numeric,backend=bibtex,useprefix=true]{biblatex}
+\addbibresource{references.bib}
 
 \usepackage{color}
 
@@ -40,6 +44,8 @@ columns=fullflexible
 
 \begin{frame}
 \titlepage
+\centering
+\small{Guide : Dr. G V V Sharma }
 \end{frame}
 \section{Content}
 \begin{frame}
@@ -48,10 +54,19 @@ columns=fullflexible
 \column{1\textwidth}
   \begin{itemize}
   \item Introduction
+  \begin{itemize}
+  	\item UGV and UAV hardware kits
+  	\item Controllers (ESP32 and VAMAN)
+  \end{itemize}
   \item Motor control basic
-  \item ESP32 based applications
-  \item Vaman based applications
+  \item ESP32 based applications (4)
+  \item Vaman based applications (2)
   \item SATCOM for UAV communication
+  \begin{itemize}
+  	\item Transparent satellite based NG-RAN architecture
+  	\item Set-up for Demonstration (Video streaming)
+  	\item Compilation, execution and testing
+  \end{itemize}
   \item UGV control using NB-IoT setup
   \end{itemize}
 \end{columns}
@@ -68,9 +83,9 @@ columns=fullflexible
   \item This thesis titled "Navigation and communication for UGV/UAV, consists of two parts:
    \begin{itemize}
   \item The navigation part of this thesis includes utilization of various controllers to implement applications on UGV/UAV hardware.
-  \item The communication part explores the use of SATCOM and NBIoT for communicating with UAV and UGV.
+  \item The communication part explores the use of SATCOM for communicating with UAV and UGV. It also briefly examines the use of NBIoT.
   \end{itemize}
-  \item UGV and UAV kits are ideal low-cost prototype systems for testing software before scaling it up and putting it on a real ground vehicle or a more complicated UAV system. 
+  \item UGV and UAV hardware kits are ideal low-cost prototype systems for testing software before scaling it up and putting it on a real ground vehicle or a more complicated UAV system. 
   \end{itemize}
 \end{columns}
 \end{frame}
@@ -199,7 +214,7 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 \begin{frame}
 \frametitle{ESP32 Based Application-1}
 \begin{columns}
-	\column{0.9\textwidth}
+	\column{0.95\textwidth}
 	\begin{figure}[h!]
   		\centering
   		\includegraphics[width=\linewidth]{./figs/Wiring_UGV_flysky.png}
@@ -282,13 +297,13 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 \section{SATCOM for UAV Communication}
 \begin{frame}{SATCOM for UAV Communication}
 \begin{itemize}
-	\item Satellite Communication (SATCOM) can be used for UAV for remote access/control as well as transmit and receive data without requiring it to return to the operator.
+	\item UAVs can utilise satellite communication (SATCOM) to send and receive data without having to send it back to the operator, as well as for remote access and control.
 	\item Convinced by the potential of 5G, Satellite industry has shown increased interest and participation in 3GPP to integrate satellite infrastructure with terrestrial network of 5G
 	\item Figure \ref{Conventional_5G} shows a typical 5G terrestrial network:
 	\begin{figure}[h!]
   		\centering
   		\includegraphics[width=0.9\linewidth]{./figs/Conventional_5G.png}
-  		\caption{Conventional 5G-NR system}
+  		\caption{Terrestrial 5G-NR system}
   		\label{Conventional_5G}
 	\end{figure}
 \end{itemize}
@@ -297,8 +312,7 @@ V_{dc} &= {\frac {1}{T}}\left(\int _{0}^{DT}v_{\text{max}}\,dt+\int _{DT}^{T}v_{
 \section{SATCOM for UAV Communication}
 \begin{frame}{SATCOM for UAV \small{(Continued})}
 \begin{itemize}
-	\item There are scenerios, where our user equipment (UAV in our case) may not be reachable from
-its nearest gNB (for example in remote areas like forests, mountainous terrain, etc).
+	\item In certain scenarios, our user equipment (in our case, a UAV) might not be reachable from the nearby gNB.(for instance, in isolated locations such as mountains, jungles, etc.)
 	\item SATCOM provides a non-terrestrial network infrastructure, enabling communication with such
 remote devices.
 	\item Latest advancements in the satellite communications have overcome previous constraints. 
@@ -323,7 +337,7 @@ remote devices.
 \begin{frame}{Set-up for Demonstration of SATCOM}
     \begin{figure}[h!]
   		\centering
-  		\includegraphics[width=\linewidth]{./figs/SATCOM_setup.png}
+  		\includegraphics[width=\linewidth]{./figs/SATCOM_setup1.png}
   		\caption{Set-up for Demonstration of SATCOM}
   		\label{SATCOM_setup}
 	\end{figure}
@@ -525,21 +539,6 @@ vlc udp//@:1234 --miface=10.60.0.1:1234
 \end{frame}
 
 
-%\begin{figure}[h!]
-%  \centering
-%  \begin{subfigure}[b]{0.5\linewidth}
-%    \includegraphics[width=\linewidth]{./figs/my_8.png}
-%%    \caption{Coffee.}
-%  \end{subfigure}
-%  \begin{subfigure}[b]{0.5\linewidth}
-%    \includegraphics[width=\linewidth]{./figs/my_9.png}
-%%    \caption{More coffee.}
-%  \end{subfigure}
-%  \caption{Force coefficient scenarios for trajectory calculations}
-%  \label{fig:side3}
-%\end{figure}
-%\end{frame}
-
 \section{UGV control using NBIoT setup}
 \begin{frame}{UGV control using NBIoT setup}
 \begin{figure}[h!]
@@ -595,8 +594,12 @@ vlc udp//@:1234 --miface=10.60.0.1:1234
 %
 %\end{frame}
 
-\newpage
-\bibliography{ref}
+
+
+\begin{frame}[t,allowframebreaks]{References} 
+	\nocite{*}
+    \printbibliography
+\end{frame}
 
 \end{document}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.1)  20 JUN 2022 00:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.1)  22 JUN 2022 20:30
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -523,23 +523,81 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip51
 \bibindent=\dimen192
 ))
+(C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks29
+\ex@=\dimen193
+))
+(C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen194
+)
+(C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count274
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count275
+\leftroot@=\count276
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count277
+\DOTSCASE@=\count278
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box58
+\strutbox@=\box59
+\big@size=\dimen195
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count279
+\c@MaxMatrixCols=\count280
+\dotsspace@=\muskip17
+\c@parentequation=\count281
+\dspbrk@lvl=\count282
+\tag@help=\toks30
+\row@=\count283
+\column@=\count284
+\maxfields@=\count285
+\andhelp@=\toks31
+\eqnshift@=\dimen196
+\alignsep@=\dimen197
+\tagshift@=\dimen198
+\tagwidth@=\dimen199
+\totwidth@=\dimen256
+\lineht@=\dimen257
+\@envbody=\toks32
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2020/05/30 v3.4k Customizing captions (AR)
 
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen193
-\captionmargin@=\dimen194
-\captionwidth=\dimen195
-\caption@tempdima=\dimen196
-\caption@indent=\dimen197
-\caption@parindent=\dimen198
-\caption@hangindent=\dimen199
+\captionmargin=\dimen258
+\captionmargin@=\dimen259
+\captionwidth=\dimen260
+\caption@tempdima=\dimen261
+\caption@indent=\dimen262
+\caption@parindent=\dimen263
+\caption@hangindent=\dimen264
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count274
-\c@continuedfloat=\count275
+\c@caption@flags=\count286
+\c@continuedfloat=\count287
 Package caption Info: hyperref package is loaded.
 )
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
@@ -547,18 +605,18 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count276
-\float@exts=\toks29
-\float@box=\box58
-\@float@everytoks=\toks30
-\@floatcapt=\box59
+\c@float@type=\count288
+\float@exts=\toks34
+\float@box=\box60
+\@float@everytoks=\toks35
+\@floatcapt=\box61
 )
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2020/07/31 version 4.31 text color boxes
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks31
-\verbatim@line=\toks32
+\every@verbatim=\toks36
+\verbatim@line=\toks37
 \verbatim@in@stream=\read3
 )
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
@@ -567,45 +625,43 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
 ty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)
-\@envbody=\toks33
-)
+))
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count277
+\etb@tempcnta=\count289
 )
-\tcb@titlebox=\box60
-\tcb@upperbox=\box61
-\tcb@lowerbox=\box62
-\tcb@phantombox=\box63
-\c@tcbbreakpart=\count278
-\c@tcblayer=\count279
-\c@tcolorbox@number=\count280
-\tcb@temp=\box64
-\tcb@temp=\box65
+\tcb@titlebox=\box62
+\tcb@upperbox=\box63
+\tcb@lowerbox=\box64
+\tcb@phantombox=\box65
+\c@tcbbreakpart=\count290
+\c@tcblayer=\count291
+\c@tcolorbox@number=\count292
 \tcb@temp=\box66
 \tcb@temp=\box67
+\tcb@temp=\box68
+\tcb@temp=\box69
 \tcb@out=\write4
 \tcb@record@out=\write5
 ) (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count281
-\lst@gtempboxa=\box68
-\lst@token=\toks34
-\lst@length=\count282
-\lst@currlwidth=\dimen256
-\lst@column=\count283
-\lst@pos=\count284
-\lst@lostspace=\dimen257
-\lst@width=\dimen258
-\lst@newlines=\count285
-\lst@lineno=\count286
-\lst@maxwidth=\dimen259
+\lst@mode=\count293
+\lst@gtempboxa=\box70
+\lst@token=\toks38
+\lst@length=\count294
+\lst@currlwidth=\dimen265
+\lst@column=\count295
+\lst@pos=\count296
+\lst@lostspace=\dimen266
+\lst@width=\dimen267
+\lst@newlines=\count297
+\lst@lineno=\count298
+\lst@maxwidth=\dimen268
 
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count287
-\lst@skipnumbers=\count288
-\lst@framebox=\box69
+\c@lstnumber=\count299
+\lst@skipnumbers=\count300
+\lst@framebox=\box71
 )
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -618,8 +674,8 @@ Package: courier 2020/03/25 PSNFSS-v9.3 (WaS)
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 mode.def
 File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count289
-\l__pdf_internal_box=\box70
+\l__kernel_color_stack_int=\count301
+\l__pdf_internal_box=\box72
 ) (thesis.aux
 
 LaTeX Warning: Label `BLDC_runner' multiply defined.
@@ -633,24 +689,24 @@ LaTeX Warning: Label `Flow_UGV_flysky' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-\AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring OFF on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+\AtBeginShipoutBox=\box73
+Package hyperref Info: Link coloring OFF on input line 45.
  (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -661,11 +717,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count290
+\c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
  (thesis.out) (thesis.out)
 \@outlinefile=\write6
 \openout6 = `thesis.out'.
@@ -674,17 +730,17 @@ LaTeX Info: Redefining \nameref on input line 44.
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen260
-\scratchbox=\box72
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen261
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count303
+\scratchdimen=\dimen269
+\scratchbox=\box74
+\nofMPsegments=\count304
+\nofMParguments=\count305
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count306
+\MPscratchDim=\dimen270
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
+\everyMPtoPDFconversion=\toks40
 )
 (C:\Users\91900\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -698,12 +754,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 
 ] [3
 
-] (thesis.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 1.
- [4
+] (thesis.toc [4
 
 
 ])
@@ -721,10 +772,10 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count297
+\c@lstlisting=\count309
  (chapter-1/introduction.tex
 Chapter 1.
-<./Figures/ESP32.jpg, id=308, 1003.75pt x 1003.75pt>
+<./Figures/ESP32.jpg, id=336, 1003.75pt x 1003.75pt>
 File: ./Figures/ESP32.jpg Graphic file (type jpg)
 <use ./Figures/ESP32.jpg>
 Package pdftex.def Info: ./Figures/ESP32.jpg  used on input line 9.
@@ -736,12 +787,12 @@ Package pdftex.def Info: ./Figures/ESP32.jpg  used on input line 9.
 
 
  <./Figures/ESP32.jpg>]
-<./Figures/Vaman.png, id=313, 3774.26387pt x 3299.34674pt>
+<./Figures/Vaman.png, id=341, 3774.26387pt x 3299.34674pt>
 File: ./Figures/Vaman.png Graphic file (type png)
 <use ./Figures/Vaman.png>
 Package pdftex.def Info: ./Figures/Vaman.png  used on input line 21.
 (pdftex.def)             Requested size: 398.33858pt x 348.1785pt.
-<./Figures/Arduino_Uno.jpg, id=315, 1029.03851pt x 772.3182pt>
+<./Figures/Arduino_Uno.jpg, id=343, 1029.03851pt x 772.3182pt>
 File: ./Figures/Arduino_Uno.jpg Graphic file (type jpg)
 <use ./Figures/Arduino_Uno.jpg>
 Package pdftex.def Info: ./Figures/Arduino_Uno.jpg  used on input line 32.
@@ -750,7 +801,7 @@ Package pdftex.def Info: ./Figures/Arduino_Uno.jpg  used on input line 32.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/Rpi_3B.png, id=316, 501.875pt x 301.125pt>
+<./Figures/Rpi_3B.png, id=344, 501.875pt x 301.125pt>
 File: ./Figures/Rpi_3B.png Graphic file (type png)
 <use ./Figures/Rpi_3B.png>
 Package pdftex.def Info: ./Figures/Rpi_3B.png  used on input line 41.
@@ -772,55 +823,53 @@ Overfull \hbox (34.94771pt too wide) in paragraph at lines 50--65
 [3 <./Figures/Arduino_Uno.jpg> <./Figures/Rpi_3B.png>])
 (chapter-2/chapter-2.tex [4]
 Chapter 2.
-<./Figures/PWM_speed_control.png, id=333, 675.52374pt x 514.92375pt>
+<./Figures/PWM_speed_control.png, id=361, 675.52374pt x 514.92375pt>
 File: ./Figures/PWM_speed_control.png Graphic file (type png)
 <use ./Figures/PWM_speed_control.png>
-Package pdftex.def Info: ./Figures/PWM_speed_control.png  used on input line 13
+Package pdftex.def Info: ./Figures/PWM_speed_control.png  used on input line 21
 .
 (pdftex.def)             Requested size: 341.43306pt x 260.26622pt.
+[5
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./Figures/Motor_driver_L298.jpg, id=335, 752.8125pt x 501.875pt>
+]
+<./Figures/Motor_driver_L298.jpg, id=372, 752.8125pt x 501.875pt>
 File: ./Figures/Motor_driver_L298.jpg Graphic file (type jpg)
 <use ./Figures/Motor_driver_L298.jpg>
-Package pdftex.def Info: ./Figures/Motor_driver_L298.jpg  used on input line 26
+Package pdftex.def Info: ./Figures/Motor_driver_L298.jpg  used on input line 34
 .
 (pdftex.def)             Requested size: 256.0748pt x 170.71947pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5
-
-] [6 <./Figures/PWM_speed_control.png (PNG copy)> <./Figures/Motor_driver_L298.
-jpg>]
-<./Figures/Driver_module_connection.png, id=346, 600.5637pt x 364.9635pt>
+[6 <./Figures/PWM_speed_control.png (PNG copy)>]
+<./Figures/Driver_module_connection.png, id=379, 600.5637pt x 364.9635pt>
 File: ./Figures/Driver_module_connection.png Graphic file (type png)
 <use ./Figures/Driver_module_connection.png>
 Package pdftex.def Info: ./Figures/Driver_module_connection.png  used on input 
-line 41.
+line 49.
 (pdftex.def)             Requested size: 433.62pt x 263.51974pt.
- [7 <./Figures/Driver_module_connection.png>]
-<./Figures/BLDC_runner.jpg, id=352, 770.88pt x 417.56pt>
+ [7 <./Figures/Motor_driver_L298.jpg> <./Figures/Driver_module_connection.png>]
+<./Figures/BLDC_runner.jpg, id=385, 770.88pt x 417.56pt>
 File: ./Figures/BLDC_runner.jpg Graphic file (type jpg)
 <use ./Figures/BLDC_runner.jpg>
-Package pdftex.def Info: ./Figures/BLDC_runner.jpg  used on input line 52.
+Package pdftex.def Info: ./Figures/BLDC_runner.jpg  used on input line 60.
 (pdftex.def)             Requested size: 312.9803pt x 169.53137pt.
-<./Figures/BLDC_pole.jpg, id=354, 1292.83pt x 714.67pt>
+<./Figures/BLDC_pole.jpg, id=387, 1292.83pt x 714.67pt>
 File: ./Figures/BLDC_pole.jpg Graphic file (type jpg)
 <use ./Figures/BLDC_pole.jpg>
-Package pdftex.def Info: ./Figures/BLDC_pole.jpg  used on input line 61.
+Package pdftex.def Info: ./Figures/BLDC_pole.jpg  used on input line 69.
 (pdftex.def)             Requested size: 312.9803pt x 173.00737pt.
  [8 <./Figures/BLDC_runner.jpg> <./Figures/BLDC_pole.jpg>]
-<./Figures/ESC_BLDC_connection.png, id=360, 1284.8pt x 610.28pt>
+<./Figures/ESC_BLDC_connection.png, id=393, 1284.8pt x 610.28pt>
 File: ./Figures/ESC_BLDC_connection.png Graphic file (type png)
 <use ./Figures/ESC_BLDC_connection.png>
 Package pdftex.def Info: ./Figures/ESC_BLDC_connection.png  used on input line 
-74.
+82.
 (pdftex.def)             Requested size: 398.33858pt x 189.21277pt.
 ) (chapter-3/chapter-3.tex [9 <./Figures/ESC_BLDC_connection.png>]
 Chapter 3.
-<./Figures/UART.png, id=366, 513.8397pt x 246.4407pt>
+<./Figures/UART.png, id=399, 513.8397pt x 246.4407pt>
 File: ./Figures/UART.png Graphic file (type png)
 <use ./Figures/UART.png>
 Package pdftex.def Info: ./Figures/UART.png  used on input line 8.
@@ -829,13 +878,13 @@ Package pdftex.def Info: ./Figures/UART.png  used on input line 8.
 
 
  <./Figures/UART.png>]
-<./Figures/SPI_single_slave.png, id=373, 578.76225pt x 155.3805pt>
+<./Figures/SPI_single_slave.png, id=406, 578.76225pt x 155.3805pt>
 File: ./Figures/SPI_single_slave.png Graphic file (type png)
 <use ./Figures/SPI_single_slave.png>
 Package pdftex.def Info: ./Figures/SPI_single_slave.png  used on input line 26.
 
 (pdftex.def)             Requested size: 312.9803pt x 84.02512pt.
-<./Figures/SPI_multi_slave.png, id=376, 579.3645pt x 457.10776pt>
+<./Figures/SPI_multi_slave.png, id=409, 579.3645pt x 457.10776pt>
 File: ./Figures/SPI_multi_slave.png Graphic file (type png)
 <use ./Figures/SPI_multi_slave.png>
 Package pdftex.def Info: ./Figures/SPI_multi_slave.png  used on input line 44.
@@ -845,7 +894,7 @@ Package pdftex.def Info: ./Figures/SPI_multi_slave.png  used on input line 44.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./Figures/SPI_single_slave.png>]
-<./Figures/I2C_multi_master.png, id=382, 1158.12675pt x 281.853pt>
+<./Figures/I2C_multi_master.png, id=415, 1158.12675pt x 281.853pt>
 File: ./Figures/I2C_multi_master.png Graphic file (type png)
 <use ./Figures/I2C_multi_master.png>
 Package pdftex.def Info: ./Figures/I2C_multi_master.png  used on input line 55.
@@ -867,13 +916,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 [13
 
 ]
-<./Figures/Wiring_UGV_flysky1.png, id=401, 4621.265pt x 2413.015pt>
+<./Figures/Wiring_UGV_flysky1.png, id=434, 4621.265pt x 2413.015pt>
 File: ./Figures/Wiring_UGV_flysky1.png Graphic file (type png)
 <use ./Figures/Wiring_UGV_flysky1.png>
 Package pdftex.def Info: ./Figures/Wiring_UGV_flysky1.png  used on input line 2
 9.
 (pdftex.def)             Requested size: 433.62pt x 226.4037pt.
-<./Figures/Flow_UGV_flysky.png, id=402, 643.9257pt x 340.3917pt>
+<./Figures/Flow_UGV_flysky.png, id=435, 643.9257pt x 340.3917pt>
 File: ./Figures/Flow_UGV_flysky.png Graphic file (type png)
 <use ./Figures/Flow_UGV_flysky.png>
 Package pdftex.def Info: ./Figures/Flow_UGV_flysky.png  used on input line 36.
@@ -885,13 +934,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
  []
 
 [15]
-<./Figures/Wiring_UGV_phone.png, id=422, 630.1944pt x 434.3427pt>
+<./Figures/Wiring_UGV_phone.png, id=455, 630.1944pt x 434.3427pt>
 File: ./Figures/Wiring_UGV_phone.png Graphic file (type png)
 <use ./Figures/Wiring_UGV_phone.png>
 Package pdftex.def Info: ./Figures/Wiring_UGV_phone.png  used on input line 77.
 
 (pdftex.def)             Requested size: 433.62pt x 298.86172pt.
-<./Figures/Flow_UGV_phone.png, id=423, 578.8827pt x 340.3917pt>
+<./Figures/Flow_UGV_phone.png, id=456, 578.8827pt x 340.3917pt>
 File: ./Figures/Flow_UGV_phone.png Graphic file (type png)
 <use ./Figures/Flow_UGV_phone.png>
 Package pdftex.def Info: ./Figures/Flow_UGV_phone.png  used on input line 84.
@@ -900,7 +949,7 @@ Package pdftex.def Info: ./Figures/Flow_UGV_phone.png  used on input line 84.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/Dabble_app_UI.jpg, id=425, 678.73575pt x 324.61275pt>
+<./Figures/Dabble_app_UI.jpg, id=458, 678.73575pt x 324.61275pt>
 File: ./Figures/Dabble_app_UI.jpg Graphic file (type jpg)
 <use ./Figures/Dabble_app_UI.jpg>
 Package pdftex.def Info: ./Figures/Dabble_app_UI.jpg  used on input line 95.
@@ -910,7 +959,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16 <./Figures/Wiring_UGV_phone.png>] [17 <./Figures/Flow_UGV_phone.png> <./Fig
 ures/Dabble_app_UI.jpg>]
-<./Figures/Wiring_UGV_speech.png, id=440, 629.4717pt x 434.3427pt>
+<./Figures/Wiring_UGV_speech.png, id=473, 629.4717pt x 434.3427pt>
 File: ./Figures/Wiring_UGV_speech.png Graphic file (type png)
 <use ./Figures/Wiring_UGV_speech.png>
 Package pdftex.def Info: ./Figures/Wiring_UGV_speech.png  used on input line 12
@@ -920,7 +969,7 @@ Package pdftex.def Info: ./Figures/Wiring_UGV_speech.png  used on input line 12
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/Flow_UGV_speech.png, id=441, 659.1024pt x 340.3917pt>
+<./Figures/Flow_UGV_speech.png, id=474, 659.1024pt x 340.3917pt>
 File: ./Figures/Flow_UGV_speech.png Graphic file (type png)
 <use ./Figures/Flow_UGV_speech.png>
 Package pdftex.def Info: ./Figures/Flow_UGV_speech.png  used on input line 134.
@@ -935,7 +984,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
  / main / Autonomous %
  []
 
-<./Figures/Speech_ctrl_IITH.jpg, id=444, 608.2725pt x 1284.8pt>
+<./Figures/Speech_ctrl_IITH.jpg, id=477, 608.2725pt x 1284.8pt>
 File: ./Figures/Speech_ctrl_IITH.jpg Graphic file (type jpg)
 <use ./Figures/Speech_ctrl_IITH.jpg>
 Package pdftex.def Info: ./Figures/Speech_ctrl_IITH.jpg  used on input line 153
@@ -950,7 +999,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
  / main / Autonomous %
  []
 
-<./Figures/Wiring_UGV_beacon.png, id=468, 630.1944pt x 434.3427pt>
+<./Figures/Wiring_UGV_beacon.png, id=501, 630.1944pt x 434.3427pt>
 File: ./Figures/Wiring_UGV_beacon.png Graphic file (type png)
 <use ./Figures/Wiring_UGV_beacon.png>
 Package pdftex.def Info: ./Figures/Wiring_UGV_beacon.png  used on input line 18
@@ -959,7 +1008,7 @@ Package pdftex.def Info: ./Figures/Wiring_UGV_beacon.png  used on input line 18
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/Flow_UGV_beacon.png, id=469, 716.9184pt x 388.0899pt>
+<./Figures/Flow_UGV_beacon.png, id=502, 716.9184pt x 388.0899pt>
 File: ./Figures/Flow_UGV_beacon.png Graphic file (type png)
 <use ./Figures/Flow_UGV_beacon.png>
 Package pdftex.def Info: ./Figures/Flow_UGV_beacon.png  used on input line 196.
@@ -976,7 +1025,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
  / main / Autonomous %
  []
 
-<./Figures/Wiring_UAV_ESP32_commlink.png, id=488, 737.8767pt x 384.4764pt>
+<./Figures/Wiring_UAV_ESP32_commlink.png, id=521, 737.8767pt x 384.4764pt>
 File: ./Figures/Wiring_UAV_ESP32_commlink.png Graphic file (type png)
 <use ./Figures/Wiring_UAV_ESP32_commlink.png>
 Package pdftex.def Info: ./Figures/Wiring_UAV_ESP32_commlink.png  used on input
@@ -985,7 +1034,7 @@ Package pdftex.def Info: ./Figures/Wiring_UAV_ESP32_commlink.png  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/Flow_UAV_ESP32_commlink.png, id=489, 615.0177pt x 403.2666pt>
+<./Figures/Flow_UAV_ESP32_commlink.png, id=522, 615.0177pt x 403.2666pt>
 File: ./Figures/Flow_UAV_ESP32_commlink.png Graphic file (type png)
 <use ./Figures/Flow_UAV_ESP32_commlink.png>
 Package pdftex.def Info: ./Figures/Flow_UAV_ESP32_commlink.png  used on input l
@@ -993,7 +1042,7 @@ ine 244.
 (pdftex.def)             Requested size: 398.33858pt x 261.19102pt.
 [23] [24 <./Figures/Wiring_UAV_ESP32_commlink.png>] [25 <./Figures/Flow_UAV_ESP
 32_commlink.png>]
-<./Figures/Wiring_FreeRTOS_demo.png, id=514, 629.4717pt x 398.9304pt>
+<./Figures/Wiring_FreeRTOS_demo.png, id=547, 629.4717pt x 398.9304pt>
 File: ./Figures/Wiring_FreeRTOS_demo.png Graphic file (type png)
 <use ./Figures/Wiring_FreeRTOS_demo.png>
 Package pdftex.def Info: ./Figures/Wiring_FreeRTOS_demo.png  used on input line
@@ -1021,7 +1070,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
  / main / Autonomous %
  []
 
-<./Figures/Wiring_UGV_flysky_Vaman.png, id=563, 643.9257pt x 521.0667pt>
+<./Figures/Wiring_UGV_flysky_Vaman.png, id=596, 643.9257pt x 521.0667pt>
 File: ./Figures/Wiring_UGV_flysky_Vaman.png Graphic file (type png)
 <use ./Figures/Wiring_UGV_flysky_Vaman.png>
 Package pdftex.def Info: ./Figures/Wiring_UGV_flysky_Vaman.png  used on input l
@@ -1033,7 +1082,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
  / main / Autonomous %
  []
 
-<./Figures/Wiring_UGV_phone_vaman.png, id=575, 644.6484pt x 521.7894pt>
+<./Figures/Wiring_UGV_phone_vaman.png, id=608, 644.6484pt x 521.7894pt>
 File: ./Figures/Wiring_UGV_phone_vaman.png Graphic file (type png)
 <use ./Figures/Wiring_UGV_phone_vaman.png>
 Package pdftex.def Info: ./Figures/Wiring_UGV_phone_vaman.png  used on input li
@@ -1043,7 +1092,7 @@ ne 76.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [31] [32 <./Figures/Wiring_UGV_phone_vaman.png>]
-<./Figures/Wiring_FreeRTOS_demo_vaman.png, id=591, 643.9257pt x 516.0078pt>
+<./Figures/Wiring_FreeRTOS_demo_vaman.png, id=624, 643.9257pt x 516.0078pt>
 File: ./Figures/Wiring_FreeRTOS_demo_vaman.png Graphic file (type png)
 <use ./Figures/Wiring_FreeRTOS_demo_vaman.png>
 Package pdftex.def Info: ./Figures/Wiring_FreeRTOS_demo_vaman.png  used on inpu
@@ -1058,7 +1107,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 [34 <./Figures/Wiring_FreeRTOS_demo_vaman.png>] [35] [36])
 (chapter-6/chapter-6.tex
 Chapter 6.
-<./Figures/Conventional_5G.png, id=638, 4059.165pt x 1329.96875pt>
+<./Figures/Conventional_5G.png, id=671, 4059.165pt x 1329.96875pt>
 File: ./Figures/Conventional_5G.png Graphic file (type png)
 <use ./Figures/Conventional_5G.png>
 Package pdftex.def Info: ./Figures/Conventional_5G.png  used on input line 9.
@@ -1066,7 +1115,7 @@ Package pdftex.def Info: ./Figures/Conventional_5G.png  used on input line 9.
 [37
 
  <./Figures/Conventional_5G.png>]
-<./Figures/SATCOM_figure.png, id=645, 6444.075pt x 4029.0525pt>
+<./Figures/SATCOM_figure.png, id=678, 6444.075pt x 4029.0525pt>
 File: ./Figures/SATCOM_figure.png Graphic file (type png)
 <use ./Figures/SATCOM_figure.png>
 Package pdftex.def Info: ./Figures/SATCOM_figure.png  used on input line 22.
@@ -1077,38 +1126,81 @@ Overfull \hbox (21.68231pt too wide) in paragraph at lines 22--23
  []
 
 [38 <./Figures/SATCOM_figure.png>] [39]
-Overfull \hbox (25.23277pt too wide) in paragraph at lines 90--92
-\OT1/cmr/bx/n/10 NOTE : \OT1/cmr/m/n/10 For Pre-requisites and de-tailed in-sta
-l-la-tion steps , Please re-fer to the file \OT1/cmr/bx/n/10 "UE[]gNB[]setup[]u
-ser[]
+<./Figures/SATCOM_setup1.png, id=691, 5756.50626pt x 2875.74374pt>
+File: ./Figures/SATCOM_setup1.png Graphic file (type png)
+<use ./Figures/SATCOM_setup1.png>
+Package pdftex.def Info: ./Figures/SATCOM_setup1.png  used on input line 61.
+(pdftex.def)             Requested size: 455.3023pt x 227.43138pt.
+
+Overfull \hbox (21.68231pt too wide) in paragraph at lines 61--62
+ [][] 
  []
 
-[40] [41]) (conclusion-chapter/conclusion.tex [42]
+[40 <./Figures/SATCOM_setup1.png>]
+<./Figures/Free5GC.png, id=697, 920.238pt x 541.42274pt>
+File: ./Figures/Free5GC.png Graphic file (type png)
+<use ./Figures/Free5GC.png>
+Package pdftex.def Info: ./Figures/Free5GC.png  used on input line 76.
+(pdftex.def)             Requested size: 346.89731pt x 204.09875pt.
+ [41 <./Figures/Free5GC.png>] [42] [43]
+<./Figures/Ping_before_adding_delay.png, id=759, 439.6425pt x 283.0575pt>
+File: ./Figures/Ping_before_adding_delay.png Graphic file (type png)
+<use ./Figures/Ping_before_adding_delay.png>
+Package pdftex.def Info: ./Figures/Ping_before_adding_delay.png  used on input 
+line 171.
+(pdftex.def)             Requested size: 303.53267pt x 195.4308pt.
+<./Figures/Ping_after_adding_delay.png, id=761, 436.029pt x 273.4215pt>
+File: ./Figures/Ping_after_adding_delay.png Graphic file (type png)
+<use ./Figures/Ping_after_adding_delay.png>
+Package pdftex.def Info: ./Figures/Ping_after_adding_delay.png  used on input l
+ine 178.
+(pdftex.def)             Requested size: 303.53267pt x 190.34653pt.
+<./Figures/5G_Call_Flow.png, id=762, 628.749pt x 785.93625pt>
+File: ./Figures/5G_Call_Flow.png Graphic file (type png)
+<use ./Figures/5G_Call_Flow.png>
+Package pdftex.def Info: ./Figures/5G_Call_Flow.png  used on input line 187.
+(pdftex.def)             Requested size: 390.25534pt x 487.83908pt.
+
+[44 <./Figures/Ping_before_adding_delay.png> <./Figures/Ping_after_adding_delay
+.png>] [45 <./Figures/5G_Call_Flow.png>]
+<./Figures/Destination_viewing_stream.png, id=776, 888.31876pt x 622.325pt>
+File: ./Figures/Destination_viewing_stream.png Graphic file (type png)
+<use ./Figures/Destination_viewing_stream.png>
+Package pdftex.def Info: ./Figures/Destination_viewing_stream.png  used on inpu
+t line 208.
+(pdftex.def)             Requested size: 455.3023pt x 318.96736pt.
+
+Overfull \hbox (21.68231pt too wide) in paragraph at lines 208--209
+ [][] 
+ []
+
+[46 <./Figures/Destination_viewing_stream.png>])
+(conclusion-chapter/conclusion.tex [47]
 Chapter 7.
-) [43
+) [48
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
  (thesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 58.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 59.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DA77549FC5BB6F5366E0B63A3E79B2D6;3060.
+(rerunfilecheck)             Checksum: 6B45A46CE3940FBF339C2084B3AF4316;3337.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
  ) 
 Here is how much of TeX's memory you used:
- 21322 strings out of 481212
- 413278 string characters out of 2905974
- 874944 words of memory out of 3000000
- 36225 multiletter control sequences out of 15000+200000
- 541553 words of font info for 51 fonts, out of 3000000 for 9000
+ 21990 strings out of 481212
+ 421967 string characters out of 2905974
+ 887692 words of memory out of 3000000
+ 36846 multiletter control sequences out of 15000+200000
+ 542007 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,15n,75p,948b,1927s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,15n,75p,948b,1932s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/91900/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <C
 :\Users\91900\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.
 pk> <C:\Users\91900\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcb
@@ -1116,14 +1208,18 @@ x0900.pk><C:/Users/91900/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb><C:/Users/91900/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmbx12.pfb><C:/Users/91900/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/91900/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/91900/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/91900/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/91900/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/91900/
-AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on thesis.pdf (50 pages, 10449463 bytes).
+X/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/91900/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/91900/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/91900/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
+91900/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Users/91900/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/91900/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucr
+b8a.pfb><C:/Users/91900/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/u
+crr8a.pfb>
+Output written on thesis.pdf (55 pages, 12008036 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 246 named destinations out of 1000 (max. 500000)
- 501 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 905 PDF objects out of 1000 (max. 8388607)
+ 270 named destinations out of 1000 (max. 500000)
+ 555 words of extra memory for PDF output out of 10000 (max. 10000000)
 

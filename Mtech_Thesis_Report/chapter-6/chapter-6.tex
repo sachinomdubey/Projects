@@ -47,21 +47,41 @@ A UAV with SATCOM capability can take on a far wider range of tasks, restricted 
 	\item From anywhere in the world, disaster relief groups may transport supplies to flood, hurricane, or earthquake victims and assess the situation through streaming video.
 \end{itemize}
 
+\newpage
 \section{Set-up for Demonstration of SATCOM}
 This section gives details on the set-up used to emulate SATCOM for UAV using 5G system. The set-up consists of three Linux-x86 workstations connected over LAN. These workstations function as UE, gNB and 5G core respectively. Figure xx shows the three entity along with the software stack at each entity.
 
 %Figure here
 
 
-In a conventional 5G system, the UE and gNB  communicate over wireless interface called the Uu interface. However, in our set-up this interface is emulated using raw socket connection over LAN. Futher, the connection between the gNB and the 5G core is also over the raw socket. Since, we are using raw socket to transfer the control and data packets between the entities, the PHY layer which perform functions such as amplication, coding, modulation, etc is not needed. Hence, the PHY layer is not implemented in this set-up.
+In a conventional 5G system, the UE and gNB  communicate over wireless interface called the Uu interface. However, in our set-up this interface is emulated using raw socket connection over LAN. Futher, the connection between the gNB and the 5G core is also over the raw socket. Since, we are using raw socket to transfer the control and data packets between the entities, the PHY layer which perform functions such as amplication, coding, modulation, etc is not needed. Hence, the PHY layer is not implemented in this set-up. Software stack for all other layers (MAC, RLC, PDCP, SDAP, RRC, NAS) are present at both UE and gNB. The Figure \ref{SATCOM_setup} show the setup for demonstration of SATCOM.
 
-Software stack for all other layers (MAC, RLC, PDCP, SDAP, RRC, NAS) are present at both UE and gNB. An open source software called Free5GC is used as 5G core in our set-up, whose main task includes: Radio resource allocation, control and initial set-up of UE, authenticates subscribers and devices, applies personalized policies, manages the mobility of the devices, etc.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.05\columnwidth]{./Figures/SATCOM_setup1.png}
+\caption{Set-up for Demonstration of SATCOM}
+\label{SATCOM_setup}
+\end{figure}
 
-\section{Video Streaming using SATCOM} 
-\subsection{FREE-5GC}
-Make sure the FREE-5GC is running. Follow the document named Doc to set up and run FREE-5GC.
-\subsection{gNB}
-\textbf{NOTE :} For Pre-requisites and detailed installation steps , Please refer to the file \textbf{\"UE\_ gNB\_ setup\_ user\_ guide.docx\"}.
+
+
+\subsection{Free-5GC Environment}
+\begin{itemize}
+	\item The Free5GC project is an open-source initiative for mobile core networks of the fifth generation (5G) aimed at construction of the 5G core network (5GC) as described in 3GPP Release 15 (R15) and futher.
+	\item It our setup it acts as our 5G core network and runs on a linux-x86 system to provides services to the UE via the gNB as defined by the 3GPP specications.
+	\item The main tasks of the 5G core includes : Radio resource allocation, control and initial set-up of UE, authenticates subscribers and devices, applies personalized policies, manages the mobility of the devices, etc.
+\end{itemize}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\columnwidth]{./Figures/Free5GC.png}
+\caption{Free-5GC Environment}
+\label{Free5GC}
+\end{figure}
+
+\section{Video Streaming using the setup} 
+Make sure the FREE-5GC is running. Follow this document named "Free5GC setup" to set up and run FREE-5GC.
+\subsection{Compilation and Execution at gNB}
+\textbf{NOTE :} For Pre-requisites and detailed installation steps , Please refer to the file \textbf{"UE\_gNB\_setup \_user\_guide.docx\"}.
 After pre-requisite installations (JSON, ROHC, Nettle, Libexplain, DPDK, ASN1, SCTP, AESN1 and IPSEC), Follow the below steps in gNB workstation terminal:
 
 \subsubsection{Exporting environment variables:}
@@ -86,8 +106,8 @@ make static -j10
 sudo ./gnbapp enp1s0 -- -diersg
 \end{lstlisting}
 
-\subsection{UE}
-\textbf{NOTE :} For Pre-requisites and detailed installation steps , Please refer to the file \textbf{"UE\_gNB\_setup\_user\_ guide.docx"}.
+\subsection{Compilation and Execution at UE}
+\textbf{NOTE :} For Pre-requisites and detailed installation steps , Please refer to the file \textbf{"UE\_gNB\_setup \_user\_guide.docx"}.
 After pre-requisite installations (JSON, ROHC, Nettle, Libexplain, DPDK, ASN1, SCTP, AESN1 and IPSEC), Follow the below steps in gNB workstation terminal:
 
 \subsubsection{Exporting environment variables:}
@@ -117,25 +137,59 @@ sudo ifconfig tun00 10.60.0.1 up
 sudo ip route add 192.168.134.224 dev tun00
 \end{lstlisting}
 
-Check the PDU session using ping (5 packets):
-\begin{lstlisting}
-ping -I tun00 192.168.134.224 -c 5
-\end{lstlisting}
 
-\subsection{Addition of delays over Ethernet to emulate Satellite link}
-Use the following commands to add delay of 542 ms at the Ethernet interface of gNB:
-\begin{lstlisting}
+\subsection{Emulating Satellite round-trip delay}
+\label{Emulating_Satellite_roundtrip_delay}
+A satellite in the GEO orbit has a round-trip signal delay of around 542ms. The entities in our setup communicate over LAN, hence we used a tool called NetEm to add the specified delay in our interface. NetEm allows linux user to add of delay, packet loss, duplication, and more to packets leaving a particular network interface.
+\subsubsection{Fixed amount of delay}
+	\begin{lstlisting}
 sudo tc qdisc add dev enp2s0 root netem delay 542ms
 \end{lstlisting}
+\subsubsection{Random delay}
+	\begin{lstlisting}
+sudo tc qdisc add dev enp2s0 root netem delay 542ms 20ms
+\end{lstlisting}
+\subsubsection{Normal delay distribution:}
+	\begin{lstlisting}
+sudo tc qdisc add dev enp2s0 root netem delay 542ms 20ms distribution normal
+\end{lstlisting}
 
-
-Note: Other commands to show and delete the added interface delay are as follow:
+\noindent Note: Other commands to show and delete the added interface delay are as follow:
 \begin{lstlisting}
 tc qdisc show
 sudo tc qdisc del dev enp2s0 root netem
 \end{lstlisting}
 
-\subsection{Streaming video from 5GC to UE via gNB}
+\newpage
+\subsection{Checking the added latency using ping}
+Before addition of delay as described in section \nameref{Emulating_Satellite_roundtrip_delay}, run the following ping command at UE terminal:
+\begin{lstlisting}
+ping -I tun00 192.168.134.224 -c 5
+\end{lstlisting}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\columnwidth]{./Figures/Ping_before_adding_delay.png}
+\caption{Ping before adding delay}
+\label{Ping_before_adding_delay}
+\end{figure}
+Now, Add delay using NetEm as described in section \nameref{Emulating_Satellite_roundtrip_delay} and run the ping command again.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\columnwidth]{./Figures/Ping_after_adding_delay.png}
+\caption{Ping after adding delay}
+\label{Ping_after_adding_delay}
+\end{figure}
+
+\subsection{5G-NR call flow}
+After adding delay and checking the same, execute the software at gNB followed by software at UE. The following events take place in order to register the UE in the core network (Control plane function)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\columnwidth]{./Figures/5G_Call_Flow.png}
+\caption{5G-NR call flow}
+\label{5G_Call_Flow}
+\end{figure}
+
+\subsection{Streaming video using the setup}
 \subsubsection{Creating video stream at source}
 To create a video stream (using file videoplayback.mp4) from 5GC to UE via gNB, run the following command in terminal of 5GC workstation. This will use UDP to stream video to a given destination IP address and port number.
 \begin{lstlisting}
@@ -149,3 +203,43 @@ To view the stream at destination, run the following command in terminal. This w
 vlc udp//@:1234 --miface=10.60.0.1:1234
 \end{lstlisting}
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.05\columnwidth]{./Figures/Destination_viewing_stream.png}
+\caption{Viewing video stream at the destination}
+\label{Destination_viewing_stream}
+\end{figure}
+
+\subsection{Video stream result}
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Sr No.}                                                & \textbf{\begin{tabular}[c]{@{}c@{}}Delay between the play command \\ at source and video packets received \\ at the destination (sec)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Delay between the stop command \\ at source and video packets halt at \\ the destination (sec)\end{tabular}} \\ \hline
+1                                                              & 2.10                                                                                                                                                & 1.60                                                                                                                                            \\ \hline
+2                                                              & 2.43                                                                                                                                                & 1.97                                                                                                                                            \\ \hline
+3                                                              & 2.04                                                                                                                                                & 1.90                                                                                                                                            \\ \hline
+4                                                              & 2.17                                                                                                                                                & 2.10                                                                                                                                            \\ \hline
+5                                                              & 2.16                                                                                                                                                & 1.7                                                                                                                                             \\ \hline 
+\multicolumn{1}{|l|}{\textbf{Average}} & \textbf{2.18}                                                                                                                                       & \textbf{1.854}                                                                                                                                  \\ \hline
+\end{tabular}
+}
+\caption{Result without ethernet delay}
+\end{table}
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Sr No.}                                                & \textbf{\begin{tabular}[c]{@{}c@{}}Delay between the play command \\ at source and video packets received \\ at the destination (sec)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Delay between the stop command \\ at source and video packets halt at \\ the destination (sec)\end{tabular}} \\ \hline
+1                                                              & 2.78                                                                                                                                                & 2.57                                                                                                                                            \\ \hline
+2                                                              & 2.58                                                                                                                                                & 2.32                                                                                                                                            \\ \hline
+3                                                              & 2.69                                                                                                                                                & 2.42                                                                                                                                            \\ \hline
+4                                                              & 2.64                                                                                                                                                & 2.74                                                                                                                                            \\ \hline
+5                                                              & 2.85                                                                                                                                                & 2.43                                                                                                                                            \\ \hline 
+\multicolumn{1}{|l|}{\textbf{Average}} & \textbf{2.708}                                                                                                                                      & \textbf{2.496}                                                                                                                                  \\ \hline
+\end{tabular}
+}
+\caption{Result with ethernet delay of 542 ms}
+\end{table}
