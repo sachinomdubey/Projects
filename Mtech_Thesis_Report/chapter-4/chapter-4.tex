@@ -314,7 +314,7 @@ In this program, we have run two different tasks in parallel on Arduino Uno usin
     uint16_t usStackDepth, void *pvParameters, UBaseType_t uxPriority,
     TaskHandle_t *pxCreatedTask );
     \end{lstlisting}
-    \item There are 6 arguments that should be passed while creating any task. Let’s see what these arguments are
+    \item There are 6 arguments that should be passed while creating any task. Let’s see what these arguments are ~\cite{FreeRTOS_task}:
     \begin{itemize}
         \item \textbf{pvTaskCode}: It is simply a pointer to the function that implements the task (in effect, just the name of the function).
         \item \textbf{pcName}: A descriptive name for the task. This is not used by FreeRTOS. It is included purely for debugging purposes.

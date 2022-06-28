@@ -61,9 +61,9 @@
 \frontmatter
 \maketitlepage
 %\makecopyrightpage
-% \makedeclarepage
+\makedeclarepage
 \makecertificate
-% \makeacknowledgements
+\makeacknowledgements
 % \makededication
 \makeabstract
 \tableofcontents
@@ -164,31 +164,31 @@ Indian Institute of Technology, Hyderabad \\
 
   
   
-%   \newcommand*{\makedeclarepage}{
-%   \thispagestyle{empty}
-%   \vspace*{0in}
-%   \addcontentsline{toc}{section}{Declaration}
-%   \begin{center}
-%   \bf
-% 	  {\Large Declaration}
-%   \end{center}
-%   %\normalsize
-% \onehalfspacing
-% I declare that this written submission represents my ideas in my own words, and where ideas or words of others have been included, I have adequately cited and referenced the original sources. I also declare that I have adhered to all principles of academic honesty and integrity and have not misrepresented or fabricated or falsified any idea/data/fact/source in my submission. I understand that any violation of the above will be a cause for disciplinary action by the Institute and can also evoke penal action from the sources that  have thus not been properly cited, or from whom proper permission has not been taken when needed.
+   \newcommand*{\makedeclarepage}{
+   \thispagestyle{empty}
+   \vspace*{0in}
+   \addcontentsline{toc}{section}{Declaration}
+   \begin{center}
+   \bf
+ 	  {\Large Declaration}
+   \end{center}
+   %\normalsize
+ \onehalfspacing
+ I declare that this written submission represents my ideas in my own words, and where ideas or words of others have been included, I have adequately cited and referenced the original sources. I also declare that I have adhered to all principles of academic honesty and integrity and have not misrepresented or fabricated or falsified any idea/data/fact/source in my submission. I understand that any violation of the above will be a cause for disciplinary action by the Institute and can also evoke penal action from the sources that  have thus not been properly cited, or from whom proper permission has not been taken when needed.
 
-%  \vspace*{0.3in}
+  \vspace*{0.3in}
 
-%  \begin{flushright}
-%  --------------------------\\
-%   (Signature) \\
-% \vspace*{0.3in}
-%  ---------------------------\\
-% (\@author) \\
-% \vspace*{0.3in}
-% -----------------------------\\
-% (Roll No.)\\
-% \end{flushright}
-%   \clearpage}
+  \begin{flushright}
+  --------------------------\\
+   (Signature) \\
+ \vspace*{0.3in}
+  ---------------------------\\
+ (\@author) \\
+ \vspace*{0.3in}
+ -----------------------------\\
+ (Roll No.)\\
+ \end{flushright}
+   \clearpage}
 
 
   \newpage

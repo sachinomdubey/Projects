@@ -141,15 +141,6 @@ In this program, we have run two different tasks in parallel on Vaman using Free
     uint16_t usStackDepth, void *pvParameters, UBaseType_t uxPriority,
     TaskHandle_t *pxCreatedTask );
     \end{lstlisting}
-    \item There are 6 arguments that should be passed while creating any task. Let’s see what these arguments are
-    \begin{itemize}
-        \item \textbf{pvTaskCode}: It is simply a pointer to the function that implements the task (in effect, just the name of the function).
-        \item \textbf{pcName}: A descriptive name for the task. This is not used by FreeRTOS. It is included purely for debugging purposes.
-        \item \textbf{usStackDepth}: Each task has its own unique stack that is allocated by the kernel to the task when the task is created. The value specifies the number of words the stack can hold, not the number of bytes. For example, if the stack is 32-bits wide and usStackDepth is passed in as 100, then 400 bytes of stack space will be allocated (100 * 4 bytes) in RAM. Use this wisely because Arduino Uno has only 2Kbytes of RAM.
-        \item \textbf{pvParameters}: Task input parameter (can be NULL).
-        \item \textbf{uxPriority}: Priority of the task ( 0 is the lowest priority).
-        \item \textbf{pxCreatedTask}: It can be used to pass out a handle to the task being created. This handle can then be used to reference the task in API calls that, for example, change the task priority or delete the task (can be NULL).
-    \end{itemize}
     \item Example of task creation
     \begin{lstlisting}
     xTaskCreate(task1,"task1",128,NULL,1,NULL);

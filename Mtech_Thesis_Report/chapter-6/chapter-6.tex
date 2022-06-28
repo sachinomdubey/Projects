@@ -69,7 +69,7 @@ In a conventional 5G system, the UE and gNB  communicate over wireless interface
 \begin{itemize}
 	\item The Free5GC project is an open-source initiative for mobile core networks of the fifth generation (5G) aimed at construction of the 5G core network (5GC) as described in 3GPP Release 15 (R15) and futher.
 	\item It our setup it acts as our 5G core network and runs on a linux-x86 system to provides services to the UE via the gNB as defined by the 3GPP specications.
-	\item The main tasks of the 5G core includes : Radio resource allocation, control and initial set-up of UE, authenticates subscribers and devices, applies personalized policies, manages the mobility of the devices, etc.
+	\item The main tasks of the 5G core includes : Radio resource allocation, control and initial set-up of UE, authenticates subscribers and devices, applies personalized policies, manages the mobility of the devices, etc.~\cite{Free5GC}
 \end{itemize}
 \begin{figure}[h!]
 \centering
@@ -179,9 +179,10 @@ Now, Add delay using NetEm as described in section \nameref{Emulating_Satellite_
 \caption{Ping after adding delay}
 \label{Ping_after_adding_delay}
 \end{figure}
-
+%
+\newpage
 \subsection{5G-NR call flow}
-After adding delay and checking the same, execute the software at gNB followed by software at UE. The following events take place in order to register the UE in the core network (Control plane function)
+After adding delay and checking the same, execute the software at gNB followed by software at UE. The following events take place in order to register the UE in the core network (Control plane function)~\cite{3GPP_23_502}
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\columnwidth]{./Figures/5G_Call_Flow.png}
@@ -191,14 +192,14 @@ After adding delay and checking the same, execute the software at gNB followed b
 
 \subsection{Streaming video using the setup}
 \subsubsection{Creating video stream at source}
-To create a video stream (using file videoplayback.mp4) from 5GC to UE via gNB, run the following command in terminal of 5GC workstation. This will use UDP to stream video to a given destination IP address and port number.
+To create a video stream (using file videoplayback.mp4) from 5GC to UE via gNB, run the following command in terminal of 5GC workstation. This will use UDP to stream video to a given destination IP address and port number.~\cite{VLC}
 \begin{lstlisting}
 cd ~/Documents #go to video path
 vlc videoplayback.mp4 --sout=udp://10.60.0.1:1234
 \end{lstlisting}
 \subsubsection{Viewing video stream at the destination}
 The video packets streamed by source travel through the software stack as shown in Figure xx.
-To view the stream at destination, run the following command in terminal. This will read the video packets received at the tun00 interface from the SDAP layer of software stack.
+To view the stream at destination, run the following command in terminal. This will read the video packets received at the tun00 interface from the SDAP layer of software stack.~\cite{VLC}
 \begin{lstlisting}
 vlc udp//@:1234 --miface=10.60.0.1:1234
 \end{lstlisting}
@@ -209,9 +210,10 @@ vlc udp//@:1234 --miface=10.60.0.1:1234
 \caption{Viewing video stream at the destination}
 \label{Destination_viewing_stream}
 \end{figure}
-
+%
+\newpage
 \subsection{Video stream result}
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \resizebox{\textwidth}{!}{
 \begin{tabular}{|c|c|c|}
@@ -227,7 +229,7 @@ vlc udp//@:1234 --miface=10.60.0.1:1234
 }
 \caption{Result without ethernet delay}
 \end{table}
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \resizebox{\textwidth}{!}{
 \begin{tabular}{|c|c|c|}

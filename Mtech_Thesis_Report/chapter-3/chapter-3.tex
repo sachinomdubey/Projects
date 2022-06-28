@@ -13,10 +13,8 @@
 Features of UART interface:
 \begin{itemize}
     \item UART is a lower data serial communication protocol. The receiver device should know baud-rate of the transmitter device before actual communication establishment.
-    \item UART is simple protocol, it uses start bit (before data word), stop bits (one or two, after data word), parity bit (even or odd) in its base format for data formatting. Parity bit helps in one bit error detection. UART Packet = 1 start bit(low level), 8 data bits including parity bit, 1 or 2 stop bit(high level)
-    \item Data is transmitted byte by byte. UART does not have clock as it is asynchronous serial communication protocol. It makes use of stop and start bits to synchronise the communication process. For long distance communication, 5V UART is converted to higher voltages viz. +12V for logic 0 and -12V for logic 1. The figure \ref{UART} below shows UART interface between two devices.
-    
-    
+    \item UART is simple protocol, it uses start bit, stop bits, parity bit in its base format for data formatting. Parity bit helps in one bit error detection.
+    \item Data is transmitted byte by byte. UART does not have clock as it is asynchronous serial communication protocol. It makes use of stop and start bits to synchronise the communication process. Voltages are converted from the 5V to +12V for logic 0 and -12V for logic 1 for long-distance communication. The figure \ref{UART} below shows UART interface between two devices~\cite{Serial_protocols}.  
 \end{itemize}
 
 \section{SPI (Serial Peripheral Interface)}
@@ -27,17 +25,17 @@ Features of UART interface:
     \caption{SPI point-to-point connections}
     \label{SPI_single_slave}
     \end{figure}
-    \item SPI is a protocol on 4 signal lines:
+    \item SPI is a serial protocol consisting of 4 signal lines:
     \begin{itemize}
-        \item A clock signal named SCLK, sent from the bus master to all slaves; all the SPI signals are synchronous to this clock signal;
-        \item A slave select signal for each slave, SSn, used to select the slave the master communicates with;
-        \item A data line from the master to the slaves, named MOSI (Master Out-Slave In)
-        \item A data line from the slaves to the master, named MISO (Master In-Slave Out)
+        \item \textbf{SCLK:} The clock signal is sent from the master to the slaves; It helps in synchronization of other SPI signals.
+        \item \textbf{SS:} Slave select signal is used to select the slave device to which the data is communicated by the master.
+        \item \textbf{MOSI:} It is a data line from the master to the slaves. It stands for Master Out-Slave In.
+        \item \textbf{MISO:} It is a data line from the slaves to the master. It stands for Master In-Slave Out.
     \end{itemize}
-    \item Two SPI bus Topologies:
+    \item There are typically two SPI bus topologies:
     \begin{itemize}
-        \item SPI Master connected to a single slave (Point-to-Point topology) as shown in figure \ref{SPI_single_slave}.
-        \item SPI Master connected to multiple slaves as shown in Figure \ref{SPI_multi_slave}.
+        \item \textbf{Point-to-Point topology:} SPI Master is connected to a single slave as shown in Figure \ref{SPI_single_slave}.
+        \item \textbf{Point-to-Multipoint topology:} SPI Master is connected to multiple slaves as shown in Figure \ref{SPI_multi_slave}~\cite{Serial_protocols}.
     \end{itemize}
     \begin{figure}[h!]
     \centering
@@ -59,6 +57,8 @@ Features of UART interface:
 
 Features:
 \begin{itemize}
-    \item I2C is a two-wire communication protocol that is commonly used to connect low-speed devices like micro-controllers, I/O interfaces, A/D and D/A converters, EEPROMs, and other peripherals in embedded systems.
-    \item One of these wires, known as SCL (Serial Clock) carries the clock signal, while the other wire, known as SDA (Serial Data) allows master and slave devices on the bus to send and receive data. The I2C protocol allows for multiple slave devices to be connected to a single master device, or for multiple masters controlling one or more slave devices (Figure \ref{I2C_multi_master}).
+    \item Unlike SPI, I2C is a 2-wire communication protocol which is commonly used for connection of low-speed devices like I/O interfaces, ADC and DAC, EEPROMs and other peripherals in embedded systems.
+    \item \textbf{SCL (Serial Clock)} carries the clock signal.
+    \item \textbf{SDA (Serial Data)} allows master and slave devices connected to the bus to send/receive data. 
+    \item I2C allows multiple slave connections to a single master device, or  multiple masters controlling one or more slaves (Figure \ref{I2C_multi_master})~\cite{Serial_protocols}.
 \end{itemize}
